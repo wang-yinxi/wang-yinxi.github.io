@@ -53,6 +53,59 @@ span.highlight {
   background-color: #ffffd0;
 }
 
+/* Match the Times author symbols used on the RepresentNav project page. */
+.author-mark {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.author-mark-star {
+  font-size: 1.12em;
+  margin-right: .5px;
+}
+
+.author-mark-dagger {
+  font-size: 1.42em;
+  line-height: 0;
+  margin: 0 1px;
+  position: relative;
+  top: .06em;
+}
+
+.project-lead-author {
+  white-space: nowrap;
+}
+
+.project-lead-author .author-mark-dagger {
+  color: #2f5597;
+  font-weight: 700;
+}
+
+.project-lead-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 7px;
+  border: 1px solid #c1cfe5;
+  border-radius: 4px;
+  background: #eaf0fb;
+  color: #23477f;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
+.publication-notes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+  margin: 8px 0 0;
+}
+
 /* Keep the two-column header readable on narrow screens */
 @media (max-width: 600px) {
   body,
