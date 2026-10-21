@@ -1,4 +1,4 @@
-// Keep the method figure visible until the real-robot video is ready to play.
+// Keep the method figure visible until the preview video is ready to play.
 document.querySelectorAll('.publication-preview').forEach((preview) => {
   const video = preview.querySelector('video');
   let hovered = false;
