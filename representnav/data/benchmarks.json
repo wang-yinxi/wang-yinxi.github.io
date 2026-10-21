@@ -1,0 +1,712 @@
+{
+  "version": 1,
+  "title": "Benchmark results",
+  "subtitle": "Comparisons reported in the paper · matched evaluation settings",
+  "source": {
+    "label": "Paper · Coming soon",
+    "url": null,
+    "note": "Baseline results are reported by the cited works. Comparisons below use the same observation setting and evaluation split; the strongest baseline can differ by metric."
+  },
+  "metricNote": "NE is in meters; other metrics use the paper’s 0–100 scale. ↑ higher is better; ↓ lower is better. Deltas are RepresentNav minus baseline: pp for rates, points for SPL and nDTW, and m for NE. — means unreported.",
+  "benchmarks": [
+    {
+      "id": "vlnverse",
+      "name": "VLNVerse",
+      "title": "VLNVerse",
+      "headline": "test-fine-sr",
+      "headlineSetting": "Full Test · fine-grained",
+      "headlineMetric": "Success rate ↑",
+      "rows": [
+        {
+          "id": "test-fine-ne",
+          "setting": "Full Test · fine-grained",
+          "metric": "NE",
+          "direction": "down",
+          "unit": "m",
+          "precision": 2,
+          "representNav": 1.6,
+          "baseline": {
+            "name": "Qwen-RobotNav-8B",
+            "value": 3.0
+          }
+        },
+        {
+          "id": "test-fine-osr",
+          "setting": "Full Test · fine-grained",
+          "metric": "OSR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 2,
+          "representNav": 89.0,
+          "baseline": {
+            "name": "Qwen-RobotNav-8B",
+            "value": 72.81
+          }
+        },
+        {
+          "id": "test-fine-sr",
+          "setting": "Full Test · fine-grained",
+          "metric": "SR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 2,
+          "representNav": 83.8,
+          "baseline": {
+            "name": "Qwen-RobotNav-8B",
+            "value": 63.75
+          }
+        },
+        {
+          "id": "test-fine-spl",
+          "setting": "Full Test · fine-grained",
+          "metric": "SPL",
+          "direction": "up",
+          "unit": "points",
+          "precision": 2,
+          "representNav": 80.9,
+          "baseline": {
+            "name": "Qwen-RobotNav-8B",
+            "value": 57.93
+          }
+        },
+        {
+          "id": "test-coarse-ne",
+          "setting": "Full Test · coarse-grained",
+          "metric": "NE",
+          "direction": "down",
+          "unit": "m",
+          "precision": 2,
+          "representNav": 3.3,
+          "baseline": {
+            "name": "Qwen-RobotNav-8B",
+            "value": 4.08
+          }
+        },
+        {
+          "id": "test-coarse-osr",
+          "setting": "Full Test · coarse-grained",
+          "metric": "OSR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 2,
+          "representNav": 69.1,
+          "baseline": {
+            "name": "Qwen-RobotNav-8B",
+            "value": 55.97
+          }
+        },
+        {
+          "id": "test-coarse-sr",
+          "setting": "Full Test · coarse-grained",
+          "metric": "SR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 2,
+          "representNav": 59.0,
+          "baseline": {
+            "name": "Qwen-RobotNav-8B",
+            "value": 46.59
+          }
+        },
+        {
+          "id": "test-coarse-spl",
+          "setting": "Full Test · coarse-grained",
+          "metric": "SPL",
+          "direction": "up",
+          "unit": "points",
+          "precision": 2,
+          "representNav": 57.4,
+          "baseline": {
+            "name": "Qwen-RobotNav-8B",
+            "value": 41.54
+          }
+        },
+        {
+          "id": "val-fine-ne",
+          "setting": "Val-Unseen · fine-grained",
+          "metric": "NE",
+          "direction": "down",
+          "unit": "m",
+          "precision": 2,
+          "representNav": 1.42,
+          "baseline": {
+            "name": "TANGO",
+            "value": 3.72
+          }
+        },
+        {
+          "id": "val-fine-osr",
+          "setting": "Val-Unseen · fine-grained",
+          "metric": "OSR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 2,
+          "representNav": 92.73,
+          "baseline": {
+            "name": "RDP",
+            "value": 71.93
+          }
+        },
+        {
+          "id": "val-fine-sr",
+          "setting": "Val-Unseen · fine-grained",
+          "metric": "SR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 2,
+          "representNav": 89.21,
+          "baseline": {
+            "name": "TANGO",
+            "value": 52.89
+          }
+        },
+        {
+          "id": "val-fine-spl",
+          "setting": "Val-Unseen · fine-grained",
+          "metric": "SPL",
+          "direction": "up",
+          "unit": "points",
+          "precision": 2,
+          "representNav": 86.5,
+          "baseline": {
+            "name": "RDP",
+            "value": 42.72
+          }
+        },
+        {
+          "id": "val-coarse-ne",
+          "setting": "Val-Unseen · coarse-grained",
+          "metric": "NE",
+          "direction": "down",
+          "unit": "m",
+          "precision": 2,
+          "representNav": null,
+          "baseline": {
+            "name": null,
+            "value": null
+          }
+        },
+        {
+          "id": "val-coarse-osr",
+          "setting": "Val-Unseen · coarse-grained",
+          "metric": "OSR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 2,
+          "representNav": null,
+          "baseline": {
+            "name": null,
+            "value": null
+          }
+        },
+        {
+          "id": "val-coarse-sr",
+          "setting": "Val-Unseen · coarse-grained",
+          "metric": "SR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 2,
+          "representNav": 64.67,
+          "baseline": {
+            "name": "GAMA",
+            "value": 48.3
+          }
+        },
+        {
+          "id": "val-coarse-spl",
+          "setting": "Val-Unseen · coarse-grained",
+          "metric": "SPL",
+          "direction": "up",
+          "unit": "points",
+          "precision": 2,
+          "representNav": 62.86,
+          "baseline": {
+            "name": "GAMA",
+            "value": 41.5
+          }
+        }
+      ],
+      "notes": [
+        "Success uses a 3 m threshold. Full Test and Val-Unseen are separate evaluation splits.",
+        "RepresentNav leads every metric it reports in this table. Coarse-grained Val-Unseen NE and OSR are unreported.",
+        "Full Test includes Qwen-RobotNav-8B; the comparison retains that stronger reported baseline."
+      ]
+    },
+    {
+      "id": "vln-ce",
+      "name": "VLN-CE",
+      "title": "VLN-CE Val-Unseen",
+      "headline": "r2r-sr",
+      "headlineSetting": "R2R · multi-view",
+      "headlineMetric": "Success rate ↑",
+      "rows": [
+        {
+          "id": "r2r-ne",
+          "setting": "R2R · multi-view",
+          "metric": "NE",
+          "direction": "down",
+          "unit": "m",
+          "precision": 2,
+          "representNav": 3.75,
+          "baseline": {
+            "name": "ABot-N0",
+            "value": 3.78
+          }
+        },
+        {
+          "id": "r2r-osr",
+          "setting": "R2R · multi-view",
+          "metric": "OSR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 73.8,
+          "baseline": {
+            "name": "Qwen-RobotNav-4B",
+            "value": 77.2
+          }
+        },
+        {
+          "id": "r2r-sr",
+          "setting": "R2R · multi-view",
+          "metric": "SR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 71.1,
+          "baseline": {
+            "name": "Qwen-RobotNav-4B",
+            "value": 69.5
+          }
+        },
+        {
+          "id": "r2r-spl",
+          "setting": "R2R · multi-view",
+          "metric": "SPL",
+          "direction": "up",
+          "unit": "points",
+          "precision": 1,
+          "representNav": 66.6,
+          "baseline": {
+            "name": "ABot-N0",
+            "value": 63.9
+          }
+        },
+        {
+          "id": "rxr-ne",
+          "setting": "RxR · multi-view",
+          "metric": "NE",
+          "direction": "down",
+          "unit": "m",
+          "precision": 2,
+          "representNav": 3.85,
+          "baseline": {
+            "name": "Qwen-RobotNav-4B",
+            "value": 3.8
+          }
+        },
+        {
+          "id": "rxr-sr",
+          "setting": "RxR · multi-view",
+          "metric": "SR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 73.0,
+          "baseline": {
+            "name": "Qwen-RobotNav-4B",
+            "value": 75.2
+          }
+        },
+        {
+          "id": "rxr-spl",
+          "setting": "RxR · multi-view",
+          "metric": "SPL",
+          "direction": "up",
+          "unit": "points",
+          "precision": 1,
+          "representNav": 64.2,
+          "baseline": {
+            "name": "Qwen-RobotNav-4B",
+            "value": 65.0
+          }
+        },
+        {
+          "id": "rxr-ndtw",
+          "setting": "RxR · multi-view",
+          "metric": "nDTW",
+          "direction": "up",
+          "unit": "points",
+          "precision": 1,
+          "representNav": 71.9,
+          "baseline": {
+            "name": "Qwen-RobotNav-4B",
+            "value": 71.9
+          }
+        }
+      ],
+      "notes": [
+        "RepresentNav is evaluated in the multi-view group. The table ranks monocular and multi-view methods separately; this comparison uses multi-view baselines.",
+        "RepresentNav leads R2R SR, SPL, and NE. Qwen-RobotNav-4B leads RxR NE, SR, and SPL; RxR nDTW is tied at 71.9.",
+        "Qwen-RobotNav is compared at 4B, matching the paper’s backbone scale.",
+        "The paper marks waypoint-predictor-based baselines with an asterisk: CMA, VLN-BERT, Reborn, ETPNav, and HNR."
+      ]
+    },
+    {
+      "id": "evt-bench",
+      "name": "EVT-Bench",
+      "title": "EVT-Bench active visual tracking",
+      "headline": "mono-dt-tr",
+      "headlineSetting": "Distracted · monocular",
+      "headlineMetric": "Tracking rate ↑",
+      "rows": [
+        {
+          "id": "mono-stt-tr",
+          "setting": "Monocular · STT",
+          "metric": "TR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 92.7,
+          "baseline": {
+            "name": "Qwen-RobotNav-4B",
+            "value": 90.0
+          }
+        },
+        {
+          "id": "mono-stt-sr",
+          "setting": "Monocular · STT",
+          "metric": "SR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 87.1,
+          "baseline": {
+            "name": "ABot-N0",
+            "value": 86.9
+          }
+        },
+        {
+          "id": "mono-stt-cr",
+          "setting": "Monocular · STT",
+          "metric": "CR",
+          "direction": "down",
+          "unit": "rate",
+          "precision": 2,
+          "representNav": 4.63,
+          "baseline": {
+            "name": "TrackVLA",
+            "value": 1.65
+          }
+        },
+        {
+          "id": "mono-dt-tr",
+          "setting": "Monocular · DT",
+          "metric": "TR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 85.5,
+          "baseline": {
+            "name": "ABot-N0",
+            "value": 75.4
+          }
+        },
+        {
+          "id": "mono-dt-sr",
+          "setting": "Monocular · DT",
+          "metric": "SR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 68.3,
+          "baseline": {
+            "name": "ABot-N0",
+            "value": 66.7
+          }
+        },
+        {
+          "id": "mono-dt-cr",
+          "setting": "Monocular · DT",
+          "metric": "CR",
+          "direction": "down",
+          "unit": "rate",
+          "precision": 2,
+          "representNav": 11.89,
+          "baseline": {
+            "name": "TrackVLA++",
+            "value": 4.71
+          }
+        },
+        {
+          "id": "multi-stt-tr",
+          "setting": "Multi-view · STT",
+          "metric": "TR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 92.9,
+          "baseline": {
+            "name": "ABot-N1",
+            "value": 89.8
+          }
+        },
+        {
+          "id": "multi-stt-sr",
+          "setting": "Multi-view · STT",
+          "metric": "SR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 90.0,
+          "baseline": {
+            "name": "TrackVLA++",
+            "value": 90.9
+          }
+        },
+        {
+          "id": "multi-stt-cr",
+          "setting": "Multi-view · STT",
+          "metric": "CR",
+          "direction": "down",
+          "unit": "rate",
+          "precision": 2,
+          "representNav": 2.85,
+          "baseline": {
+            "name": "TrackVLA++",
+            "value": 1.5
+          }
+        },
+        {
+          "id": "multi-dt-tr",
+          "setting": "Multi-view · DT",
+          "metric": "TR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 86.8,
+          "baseline": {
+            "name": "ABot-N1",
+            "value": 84.4
+          }
+        },
+        {
+          "id": "multi-dt-sr",
+          "setting": "Multi-view · DT",
+          "metric": "SR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 75.6,
+          "baseline": {
+            "name": "TrackVLA++",
+            "value": 74.0
+          }
+        },
+        {
+          "id": "multi-dt-cr",
+          "setting": "Multi-view · DT",
+          "metric": "CR",
+          "direction": "down",
+          "unit": "rate",
+          "precision": 2,
+          "representNav": 8.11,
+          "baseline": {
+            "name": "TrackVLA++",
+            "value": 3.51
+          }
+        }
+      ],
+      "notes": [
+        "STT is single-target tracking; DT is distracted tracking. Monocular and multi-view comparisons use separate observation settings.",
+        "RepresentNav has the highest tracking rate in all four settings. Its monocular distracted tracking rate improves by 10.1 percentage points.",
+        "TrackVLA and TrackVLA++ retain lower collision rates. TrackVLA++ also has higher multi-view STT success (90.9 versus 90.0)."
+      ]
+    },
+    {
+      "id": "internvla-n1",
+      "name": "InternVLA-N1",
+      "title": "InternVLA-N1 point-goal",
+      "headline": "mean-sr",
+      "headlineSetting": "Point-goal · mean",
+      "headlineMetric": "Success rate ↑",
+      "rows": [
+        {
+          "id": "home-sr",
+          "setting": "Home",
+          "metric": "SR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 95.5,
+          "baseline": {
+            "name": "SPAN-Nav",
+            "value": 90.9
+          }
+        },
+        {
+          "id": "home-spl",
+          "setting": "Home",
+          "metric": "SPL",
+          "direction": "up",
+          "unit": "points",
+          "precision": 1,
+          "representNav": 83.4,
+          "baseline": {
+            "name": "SPAN-Nav",
+            "value": 85.7
+          }
+        },
+        {
+          "id": "commercial-sr",
+          "setting": "Commercial",
+          "metric": "SR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 94.5,
+          "baseline": {
+            "name": "SPAN-Nav",
+            "value": 91.0
+          }
+        },
+        {
+          "id": "commercial-spl",
+          "setting": "Commercial",
+          "metric": "SPL",
+          "direction": "up",
+          "unit": "points",
+          "precision": 1,
+          "representNav": 89.9,
+          "baseline": {
+            "name": "SPAN-Nav",
+            "value": 88.1
+          }
+        },
+        {
+          "id": "mean-sr",
+          "setting": "Mean",
+          "metric": "SR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 95.0,
+          "baseline": {
+            "name": "SPAN-Nav",
+            "value": 91.0
+          }
+        },
+        {
+          "id": "mean-spl",
+          "setting": "Mean",
+          "metric": "SPL",
+          "direction": "up",
+          "unit": "points",
+          "precision": 1,
+          "representNav": 86.7,
+          "baseline": {
+            "name": "SPAN-Nav",
+            "value": 86.9
+          }
+        }
+      ],
+      "notes": [
+        "The InternVLA-N1 protocol evaluates point-goal navigation on InternScenes Home and Commercial.",
+        "RepresentNav leads success rate on both environments and their mean. SPAN-Nav retains higher Home SPL and mean SPL (86.9 versus 86.7)."
+      ]
+    },
+    {
+      "id": "abotn-pointbench",
+      "name": "ABotN-PointBench",
+      "title": "Indoor ABotN-PointBench",
+      "headline": "all-sr",
+      "headlineSetting": "Collision-free · All",
+      "headlineMetric": "Success rate ↑",
+      "rows": [
+        {
+          "id": "all-sr",
+          "setting": "All",
+          "metric": "SR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 97.5,
+          "baseline": {
+            "name": "ABot-N1",
+            "value": 95.4
+          }
+        },
+        {
+          "id": "all-spl",
+          "setting": "All",
+          "metric": "SPL",
+          "direction": "up",
+          "unit": "points",
+          "precision": 1,
+          "representNav": 95.8,
+          "baseline": {
+            "name": "ABot-N1",
+            "value": 93.7
+          }
+        },
+        {
+          "id": "low-sr",
+          "setting": "Low",
+          "metric": "SR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 100,
+          "baseline": {
+            "name": "ABot-N1",
+            "value": 95.0
+          }
+        },
+        {
+          "id": "low-spl",
+          "setting": "Low",
+          "metric": "SPL",
+          "direction": "up",
+          "unit": "points",
+          "precision": 1,
+          "representNav": 97.6,
+          "baseline": {
+            "name": "ABot-N1",
+            "value": 93.3
+          }
+        },
+        {
+          "id": "high-sr",
+          "setting": "High",
+          "metric": "SR",
+          "direction": "up",
+          "unit": "rate",
+          "precision": 1,
+          "representNav": 95.0,
+          "baseline": {
+            "name": "ABot-N1",
+            "value": 95.8
+          }
+        },
+        {
+          "id": "high-spl",
+          "setting": "High",
+          "metric": "SPL",
+          "direction": "up",
+          "unit": "points",
+          "precision": 1,
+          "representNav": 93.9,
+          "baseline": {
+            "name": "ABot-N1",
+            "value": 94.2
+          }
+        }
+      ],
+      "notes": [
+        "An episode succeeds only when the robot reaches its goal without a collision.",
+        "RepresentNav leads overall success and SPL by 2.1 points each. ABot-N1 retains higher success and SPL in the High subset.",
+        "All, Low, and High retain the subset labels used in Table 1."
+      ]
+    }
+  ]
+}

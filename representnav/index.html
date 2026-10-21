@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8fc">
+  <meta name="description" content="RepresentNav builds a self-constructed representation space for navigation and dreams in it: a latent chain-of-thought predicts the scene a moment ahead before every action.">
+  <meta property="og:title" content="RepresentNav — See What I Need, Dream What I Want">
+  <meta property="og:description" content="A Navigation Foundation Model on a Self&#8209;Constructed Representation Space.">
+  <link rel="canonical" href="https://wang-yinxi.github.io/representnav/">
+  <meta property="og:url" content="https://wang-yinxi.github.io/representnav/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://wang-yinxi.github.io/images/representnav.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>RepresentNav — See What I Need, Dream What I Want</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/source-sans-3-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="modulepreload" href="vendor/three/three.module.min.js">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="js/readouts.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#see">Skip to the interactive method</a>
+
+  <header class="topbar" data-topbar>
+    <a class="wordmark" href="#top" aria-label="RepresentNav, back to top">
+      <span class="wordmark-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>Represent<b>Nav</b></span>
+    </a>
+    <nav aria-label="Page sections">
+      <a href="#abstract">Abstract</a>
+      <a href="#overview">Method</a>
+      <a href="#see">See</a>
+      <a href="#dream">Dream</a>
+      <a href="#real-world">Videos</a>
+      <a href="#citation">BibTeX</a>
+    </nav>
+    <span class="topbar-paper resource-pending" aria-disabled="true">Paper <span class="resource-status">Coming soon</span></span>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-backdrop" aria-hidden="true">
+        <span class="orb orb-a"></span><span class="orb orb-b"></span><span class="orb orb-c"></span>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="hero-inner">
+        <p class="hero-kicker"><span class="kicker-dot"></span>Navigation foundation model</p>
+        <h1 id="hero-title"><span class="title-see">See What I Need,</span> <span class="title-dream">Dream What I Want</span></h1>
+        <p class="hero-subtitle">A Navigation Foundation Model on a Self&#8209;Constructed Representation Space</p>
+        <div class="authors" aria-label="Paper authors">
+          <p class="author-row author-row--equal"><span><a href="https://pku-cs-cjw.top/" target="_blank" rel="noopener">Jiawei Chen</a><sup><span class="mk mk-ast">∗</span>1</sup></span><span><a href="https://wang-yinxi.github.io/" target="_blank" rel="noopener">Yinxi Wang</a><sup><span class="mk mk-ast">∗</span><span class="mk mk-dag">†</span>1</sup></span><span><a href="https://smallyang688.github.io/" target="_blank" rel="noopener">Zihan Yang</a><sup><span class="mk mk-ast">∗</span>1</sup></span><span><a href="https://resonate2221.github.io/" target="_blank" rel="noopener">Meijun Gao</a><sup><span class="mk mk-ast">∗</span>1</sup></span><span><a href="https://github.com/yysmwt" target="_blank" rel="noopener">Yaowei Liu</a><sup><span class="mk mk-ast">∗</span>1</sup></span><span><a href="https://github.com/Asimovzz" target="_blank" rel="noopener">Shuming Zhang</a><sup><span class="mk mk-ast">∗</span>1</sup></span></p>
+          <p class="author-row"><span><a href="https://fvsdc286-lab.github.io/" target="_blank" rel="noopener">Zecheng Li</a><sup>2</sup></span><span><a href="https://scholar.google.com/citations?user=ICCEv6YAAAAJ" target="_blank" rel="noopener">Xiangju Mi</a><sup>1</sup></span><span>Yuxuan Liu<sup>1</sup></span><span><a href="https://github.com/horizon921" target="_blank" rel="noopener">Runzhong Huang</a><sup>1</sup></span><span><a href="https://github.com/limou-ctrl" target="_blank" rel="noopener">Tianlin Li</a><sup>1</sup></span><span><a href="https://github.com/samohtac" target="_blank" rel="noopener">Xun Zhang</a><sup>1</sup></span></p>
+          <p class="author-row"><span><a href="https://github.com/Ringringing" target="_blank" rel="noopener">Zhengyang Wang</a><sup>1</sup></span><span><a href="https://datacanvas.com/" target="_blank" rel="noopener">Xu Miao</a><sup>1,3<svg class="mk-env" viewBox="0 0 20 14" aria-label="corresponding author" role="img"><rect x="1" y="1" width="18" height="12" rx=".6"/><path d="M1.2 1.4 10 8.4l8.8-7"/></svg></sup></span><span><a href="https://scholar.google.com/citations?user=zYDaX-4AAAAJ" target="_blank" rel="noopener">Tong Yang</a><sup>1<svg class="mk-env" viewBox="0 0 20 14" aria-label="corresponding author" role="img"><rect x="1" y="1" width="18" height="12" rx=".6"/><path d="M1.2 1.4 10 8.4l8.8-7"/></svg></sup></span></p>
+        </div>
+        <p class="contributions"><span><sup><span class="mk mk-ast">∗</span></sup>Equal contribution</span><span><sup><span class="mk mk-dag">†</span></sup>Project lead</span><span><sup><svg class="mk-env" viewBox="0 0 20 14" aria-label="corresponding author" role="img"><rect x="1" y="1" width="18" height="12" rx=".6"/><path d="M1.2 1.4 10 8.4l8.8-7"/></svg></sup>Corresponding authors</span></p>
+        <p class="affiliations"><span><sup>1</sup>Peking University</span><span><sup>2</sup>University College London, University of London</span><span><sup>3</sup>DataCanvas</span></p>
+        <ul class="logo-row" aria-label="Affiliations">
+          <li><span class="logo logo-pku" role="img" aria-label="Peking University"></span></li>
+          <li><img class="logo logo-ucl" src="assets/logos/ucl.svg" alt="University College London" onerror="this.closest('li').hidden=true"></li>
+          <li><img class="logo logo-dc" src="assets/logos/datacanvas.png" alt="DataCanvas" onerror="this.closest('li').hidden=true"></li>
+        </ul>
+        <div class="hero-actions">
+          <span class="button primary resource-pending" aria-disabled="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 2.5h6.5L16 7v10.5H5z M11.5 2.5V7H16" /></svg>Paper <span class="resource-status">Coming soon</span></span>
+          <span class="button resource-pending" aria-disabled="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 5-5 5 5 5 M14 5l5 5-5 5 M12 3l-4 14" /></svg>Code <span class="resource-status">Coming soon</span></span>
+          <a class="button" href="#see"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h14 M11 4l6 6-6 6" /></svg>Interactive method</a>
+          <a class="button" href="#real-world"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 4.5v11l9-5.5z" /></svg>Videos</a>
+          <a class="button" href="#citation"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5 3 10l4 5 M13 5l4 5-4 5" /></svg>BibTeX</a>
+        </div>
+      </div>
+    </section>
+
+    <figure class="teaser" aria-label="RepresentNav teaser">
+      <div class="teaser-card">
+        <img src="assets/paper/standalone/teaser.svg" alt="RepresentNav teaser: real-world navigation, decoded scene information, latent reasoning and benchmark comparisons" width="1540" height="612">
+      </div>
+      <figcaption><strong>See what I need. Dream what I want.</strong> A self-constructed representation for navigation, and a latent dream of the world ahead.</figcaption>
+    </figure>
+
+    <section class="abstract" id="abstract" aria-labelledby="abstract-title">
+      <div class="section-label"><span class="label-index">00</span><h2 id="abstract-title">Abstract</h2></div>
+      <div class="abstract-body">
+        <p>What visual representation should a navigation policy act on? A central idea of representation learning is that the task’s own error should shape the representation. Navigation policies built on vision foundation models largely set this idea aside: the encoders’ pretraining objectives decide much of what the vision-language backbone sees. We present <strong>RepresentNav</strong>, a navigation foundation model built on a <em>self-constructed representation space</em>: a visual representation constructed by the policy’s own objectives out of the internal structure of vision foundation models. RepresentNav builds this space with Representation Residuals, a compact three-layer transformer that attends over features spanning the full depth of multiple complementary vision foundation models, so that the policy learns to see what it needs for navigation. In the same space it dreams what it wants: before every action a latent chain-of-thought predicts the representation of the scene a moment ahead. The dream is trained end-to-end with the policy as a joint-embedding predictive architecture (JEPA), with a next-representation prediction loss and a regularizer on its targets.</p>
+        <p>RepresentNav sets a new state of the art on VLNVerse, VLN-CE R2R, EVT-Bench, and two point-goal benchmarks, and its gains carry over to a physical robot amid clutter and moving people. On the VLNVerse fine-grained benchmark, RepresentNav achieves a success rate of <strong>83.80%</strong>, outperforming the previous state of the art by <strong>20.05 percentage points</strong>, and on EVT-Bench distracted tracking it reaches <strong>85.5%</strong> with a single camera (+10.1). Analysis shows where they come from. With the same encoders, the self-constructed space clearly outperforms concatenating their outputs and learns to weight their layers unevenly, and a dream in it cuts collisions by a quarter. A single dreamed latent decodes into the depth, semantics, and 3D occupancy of the scene a moment ahead, more accurately than pretrained encoders applied to the real future frame, although occupancy is never supervised, and the rollout tracks the robot’s own motion over the next second: the dream emerges as a compact latent world model.</p>
+      </div>
+    </section>
+
+    <section class="overview" id="overview" aria-labelledby="overview-title">
+      <div class="section-head">
+        <p class="eyebrow">Method overview</p>
+        <h2 id="overview-title">Learn what to see. Predict what comes next.</h2>
+        <p class="section-deck">One representation space carries perception, foresight and action.</p>
+      </div>
+      <div class="overview-cards">
+        <a class="idea" href="#see">
+          <span class="idea-index">a</span>
+          <h3>Representation Residuals</h3>
+          <p>Three trainable transformer layers attend over layers spanning the full depth of three frozen vision foundation models. A learnable [CLS] summarizes each view.</p>
+          <span class="idea-link">See what I need →</span>
+        </a>
+        <a class="idea" href="#dream">
+          <span class="idea-index">b</span>
+          <h3>Latent chain-of-thought</h3>
+          <p>Before acting, the language model rolls out four continuous latents, each predicting the future [CLS] tokens; VISReg keeps the targets from collapsing.</p>
+          <span class="idea-link">Dream what I want →</span>
+        </a>
+        <a class="idea" href="#real-world">
+          <span class="idea-index">c</span>
+          <h3>One policy, many tasks</h3>
+          <p>A planning head maps the latent-end state to eight waypoints for point-goal navigation, tracking and VLN; QA shares the same backbone.</p>
+          <span class="idea-link">Watch it navigate →</span>
+        </a>
+      </div>
+      <button class="pipeline-figure" type="button" data-figure="assets/paper/standalone/pipeline.svg" data-caption="RepresentNav overview: (a) Representation Residuals; (b) autoregressive latent reasoning." aria-label="Expand the pipeline figure">
+        <img src="assets/paper/standalone/pipeline.svg" width="1700" height="943" alt="RepresentNav pipeline: frozen semantic, geometric and dynamic encoders feed three Representation Residuals layers; a large language model reasons through four latent states and a planning head outputs a trajectory." loading="lazy">
+        <span class="figure-expand">Expand figure ↗</span>
+      </button>
+    </section>
+
+    <!-- 01 · See what I need -->
+    <section class="chapter chapter-see" id="see" aria-labelledby="see-title">
+      <div class="section-head">
+        <p class="eyebrow"><span class="chapter-num">01</span>Representation Residuals</p>
+        <h2 id="see-title">See what I need.</h2>
+        <p class="section-deck">Attention residuals read every depth of three frozen foundation models; the policy’s own objective decides what its representation makes explicit.</p>
+      </div>
+
+      <div class="workspace" data-workspace="representation">
+        <div class="stage stage-light" data-stage="representation">
+          <div class="stage-host" aria-label="Animated 3D illustration of Representation Residuals" role="img"></div>
+          <div class="stage-ui">
+            <div class="stage-top">
+              <div class="case-tabs" role="group" aria-label="Example scene">
+                <button type="button" data-case="vln" aria-pressed="false">VLN</button><button type="button" data-case="pointgoal" aria-pressed="false">PointGoal</button><button type="button" data-case="track" aria-pressed="false">Track</button>
+              </div>
+              <ul class="stage-legend" aria-label="Legend">
+                <li><i class="lg-frozen" aria-hidden="true">❄</i>Frozen</li>
+                <li><i class="lg-drop" aria-hidden="true"></i>Trainable</li>
+                <li><i class="lg-alpha" aria-hidden="true">α</i>Attention residual</li>
+                <li><i class="lg-cls" aria-hidden="true"></i>[CLS]</li>
+                <li><i class="lg-rep" aria-hidden="true"></i>Representation token</li>
+              </ul>
+            </div>
+            <div class="stage-bottom">
+              <button type="button" class="stage-btn" data-action="toggle" aria-label="Pause animation"><svg viewBox="0 0 20 20" aria-hidden="true"><path class="i-pause" d="M6 4h3v12H6zM11 4h3v12h-3z"/><path class="i-play" d="M6 4l10 6-10 6z"/></svg></button>
+              <button type="button" class="stage-btn" data-action="replay" aria-label="Replay animation"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10a5.5 5.5 0 1 0 1.7-4M4 3.5v3.2h3.2" fill="none"/></svg></button>
+              <div class="stage-caption" aria-live="polite"><span class="step-index">01</span><div><strong class="step-label">Observe</strong><p class="step-text"></p></div></div>
+              <div class="timeline" role="group" aria-label="Animation chapters"><div class="timeline-track"><span class="timeline-fill"></span></div><div class="timeline-chapters"></div></div>
+              <span class="stage-hint">Drag to look around · click a readout</span>
+            </div>
+          </div>
+          <div class="stage-fallback" hidden><p>The 3D illustration needs WebGL. The explorer below still shows every readout.</p></div>
+        </div>
+
+        <div class="explorer readout-explorer">
+          <aside class="readout-sidebar">
+            <p class="eyebrow">Read the [CLS]</p>
+            <h3>One token.<br>A structured world.</h3>
+            <p class="explorer-description">Post-hoc readout heads open the current representation. Choose what to look at.</p>
+            <div class="modality-tabs" role="group" aria-label="Representation readout"></div>
+            <p class="probe-note">Readout heads only visualize the representation; they are not part of the control loop.</p>
+          </aside>
+          <div class="readout-shell">
+            <div class="readout-heading"><div><span class="readout-title">3D occupancy</span><span class="readout-dim">120 × 80 × 20 voxels</span></div><span class="time-tag">Current representation · t = 0</span></div>
+            <div class="readout-area">
+              <div class="occ-container"><canvas class="occ-canvas" tabindex="0" aria-label="3D occupancy. Drag to rotate, use arrow keys to orbit, plus or minus to zoom."></canvas><img class="occ-fallback" alt="Occupancy scene preview" hidden><div class="occ-loading">Constructing the scene…</div><div class="occ-hint">↔ Drag to rotate · Scroll to zoom</div><div class="height-legend"><span>Height</span><i></i><span>0</span><span>2 m</span></div></div>
+              <div class="modality-container" hidden></div>
+            </div>
+            <div class="readout-footer"><span class="frame-context">Fixed robot frame · meters</span><div class="view-buttons" role="group" aria-label="Occupancy viewpoint"><button type="button" data-view="orbit" class="active" aria-pressed="true">3D</button><button type="button" data-view="top" aria-pressed="false">BEV</button><button type="button" data-view="side" aria-pressed="false">Side</button><button type="button" data-view="reset" aria-label="Reset occupancy viewpoint">↺</button></div></div>
+          </div>
+        </div>
+        <p class="illustration-note">Interactive illustration reconstructed to explain the method: real RGB inputs, illustrative readouts, not checkpoint inference.</p>
+      </div>
+    </section>
+
+    <!-- 02 · Dream what I want -->
+    <section class="chapter chapter-dream" id="dream" aria-labelledby="dream-title">
+      <div class="dream-sky" aria-hidden="true"><canvas class="sparkle-canvas"></canvas></div>
+      <div class="section-head dream-head">
+        <p class="eyebrow"><span class="chapter-num">02</span>Latent chain-of-thought</p>
+        <h2 id="dream-title" class="dream-title"><span class="dream-word">Dream</span> emerges as a<br><span class="dream-line">latent navigation world model.</span></h2>
+        <p class="section-deck">Before every action, the policy dreams in the space it sees through: four continuous latents predict the representation of the scene a moment ahead.</p>
+      </div>
+
+      <div class="workspace dream-workspace" data-workspace="dream">
+        <div class="stage stage-dark" data-stage="dream">
+          <div class="stage-host" aria-label="Animated 3D illustration of latent reasoning" role="img"></div>
+          <div class="stage-emerge" aria-hidden="true">
+            <p class="emerge-title"><span class="emerge-word">Emerge</span></p>
+            <i class="emerge-spark s1"></i><i class="emerge-spark s2"></i><i class="emerge-spark s3"></i><i class="emerge-spark s4"></i><i class="emerge-spark s5"></i>
+          </div>
+          <div class="stage-ui">
+            <div class="stage-top">
+              <div class="case-tabs" role="group" aria-label="Example scene">
+                <button type="button" data-case="vln" aria-pressed="false">VLN</button><button type="button" data-case="pointgoal" aria-pressed="false">PointGoal</button><button type="button" data-case="track" aria-pressed="false">Track</button>
+              </div>
+              <ul class="stage-legend" aria-label="Legend">
+                <li><i class="lg-text" aria-hidden="true"></i>Text token</li>
+                <li><i class="lg-rep" aria-hidden="true"></i>Representation token</li>
+                <li><i class="lg-boundary" aria-hidden="true"></i>latent_start / end</li>
+                <li><i class="lg-latent" aria-hidden="true"></i>Latent state h</li>
+                <li><i class="lg-cls" aria-hidden="true"></i>[CLS] target</li>
+              </ul>
+            </div>
+            <div class="stage-bottom">
+              <button type="button" class="stage-btn" data-action="toggle" aria-label="Pause animation"><svg viewBox="0 0 20 20" aria-hidden="true"><path class="i-pause" d="M6 4h3v12H6zM11 4h3v12h-3z"/><path class="i-play" d="M6 4l10 6-10 6z"/></svg></button>
+              <button type="button" class="stage-btn" data-action="replay" aria-label="Replay animation"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10a5.5 5.5 0 1 0 1.7-4M4 3.5v3.2h3.2" fill="none"/></svg></button>
+              <div class="stage-caption" aria-live="polite"><span class="step-index">01</span><div><strong class="step-label">Observe & instruct</strong><p class="step-text"></p></div></div>
+              <div class="timeline" role="group" aria-label="Animation chapters"><div class="timeline-track"><span class="timeline-fill"></span></div><div class="timeline-chapters"></div></div>
+              <span class="stage-hint">Drag to look around · click h₁…h₄</span>
+            </div>
+          </div>
+          <div class="stage-fallback" hidden><p>The 3D illustration needs WebGL. The explorer below still shows every decoded state.</p></div>
+        </div>
+
+        <div class="future-token-strip" role="group" aria-label="Choose a future latent">
+          <span class="strip-label">Open a dreamed state</span>
+          <button type="button" class="latent-token" data-token="1" aria-pressed="false"><span>h₁</span><small>+0.4 s</small></button><button type="button" class="latent-token" data-token="2" aria-pressed="false"><span>h₂</span><small>+0.8 s</small></button><button type="button" class="latent-token" data-token="3" aria-pressed="false"><span>h₃</span><small>+1.2 s</small></button><button type="button" class="latent-token" data-token="4" aria-pressed="false"><span>h₄</span><small>+1.6 s</small></button>
+          <button type="button" class="strip-play" data-action="play" aria-label="Play future states">▶ <span>Play future</span></button>
+        </div>
+
+        <div class="explorer readout-explorer">
+          <aside class="readout-sidebar">
+            <p class="eyebrow">Open a future latent</p>
+            <h3>A future state.<br>Made visible.</h3>
+            <p class="explorer-description">Every panel moves to the same dreamed moment.</p>
+            <div class="modality-tabs" role="group" aria-label="Future latent readout"></div>
+            <div class="dream-playback"><button type="button" data-action="previous" aria-label="Previous future latent">←</button><div class="future-timeline"><span>+0.4 s</span><input type="range" min="1" max="4" value="1" step="1" aria-label="Future latent"><span>+1.6 s</span></div><button type="button" data-action="next" aria-label="Next future latent">→</button></div>
+          </aside>
+          <div class="readout-shell">
+            <div class="readout-heading"><div><span class="readout-title">3D occupancy</span><span class="readout-dim">120 × 80 × 20 voxels</span></div><span class="time-tag">h₁ · t + 0.4 s</span></div>
+            <div class="readout-area">
+              <div class="occ-container"><canvas class="occ-canvas" tabindex="0" aria-label="Future 3D occupancy. Drag to rotate, use arrow keys to orbit, plus or minus to zoom."></canvas><img class="occ-fallback" alt="Future occupancy scene preview" hidden><div class="occ-loading">Constructing the scene…</div><div class="occ-hint">↔ Drag to rotate · Scroll to zoom</div><div class="height-legend"><span>Height</span><i></i><span>0</span><span>2 m</span></div></div>
+              <div class="modality-container" hidden></div>
+            </div>
+            <div class="readout-footer"><span class="frame-context">Fixed robot frame · meters</span><div class="view-buttons" role="group" aria-label="Future occupancy viewpoint"><button type="button" data-view="orbit" class="active" aria-pressed="true">3D</button><button type="button" data-view="top" aria-pressed="false">BEV</button><button type="button" data-view="side" aria-pressed="false">Side</button><button type="button" data-view="reset" aria-label="Reset future occupancy viewpoint">↺</button></div></div>
+          </div>
+        </div>
+        <p class="illustration-note">Decoded latents are post-hoc visualizations, reconstructed to explain the method; they are not part of the control loop.</p>
+      </div>
+    </section>
+
+    <section class="real-world" id="real-world" aria-labelledby="real-title">
+      <div class="section-head">
+        <p class="eyebrow"><span class="chapter-num">03</span>From representation to action</p>
+        <h2 id="real-title">Real-world demonstrations</h2>
+        <p class="section-deck">Three tasks, real environments: goal-directed navigation, instruction following, and tracking a moving target.</p>
+      </div>
+      <div class="video-grid">
+        <article class="video-card"><div class="video-media"><video controls playsinline muted preload="none" poster="assets/videos/pointgoal-obstacles-captioned-poster.jpg" data-video="pointgoal" aria-label="PointGoal obstacle navigation third-person demonstration"><source data-src="assets/videos/pointgoal-obstacles-captioned.mp4" type="video/mp4"></video></div><div class="video-meta"><span class="video-tag">PointGoal</span><div><h3>Point-goal navigation</h3><p class="video-instruction">Navigate toward a goal specified in the robot frame, through floor clutter.</p></div><label class="speed-control">Speed<select aria-label="PointGoal playback speed"><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div></article>
+        <article class="video-card"><div class="video-media"><video controls playsinline muted preload="none" poster="assets/videos/vln-user4-captioned-poster.jpg" data-video="vln" aria-label="Vision-and-language navigation third-person demonstration"><source data-src="assets/videos/vln-user4-captioned.mp4" type="video/mp4"></video></div><div class="video-meta"><span class="video-tag">VLN</span><div><h3>Vision-and-language navigation</h3><p class="video-instruction">“Pass the fire extinguisher, follow the corridor to the end, turn left, and continue straight. After passing the glass-walled room, turn left again and continue forward. Pass the elevator and walk to the bar counter. Turn right, pass the green plant, turn left, enter the doorway, and stop.”</p></div><label class="speed-control">Speed<select aria-label="VLN playback speed"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select></label></div></article>
+        <article class="video-card tracking-card"><div class="video-media portrait-video"><video controls playsinline muted preload="none" poster="assets/videos/track-bumi-trim12-captioned-poster.jpg" data-video="track-bumi" aria-label="Go2 tracking Bumi third-person demonstration"><source data-src="assets/videos/track-bumi-trim12-captioned.mp4" type="video/mp4"></video></div><div class="video-meta"><span class="video-tag">Track</span><div><p class="tracking-eyebrow">A moving goal</p><h3>Tracking Bumi</h3><blockquote>“Track the humanoid robot.”</blockquote><p class="video-instruction">Go2 follows Bumi through the corridor, keeping pace with a moving target.</p><label class="speed-control">Playback speed<select aria-label="Bumi tracking playback speed"><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div></div></article>
+      </div>
+    </section>
+
+    <section class="citation" id="citation" aria-labelledby="citation-title">
+      <div class="section-head"><p class="eyebrow">Cite</p><h2 id="citation-title">BibTeX</h2></div>
+      <div class="citation-box"><div class="citation-bar"><span>BIBTEX</span><button type="button" id="copy-citation">Copy citation</button></div><pre id="citation-text">@misc{chen_representnav,
+  title  = {See What I Need, Dream What I Want:
+            A Navigation Foundation Model on a
+            Self-Constructed Representation Space},
+  author = {Chen, Jiawei and Wang, Yinxi and Yang, Zihan and
+            Gao, Meijun and Liu, Yaowei and Zhang, Shuming and
+            Li, Zecheng and Mi, Xiangju and Liu, Yuxuan and
+            Huang, Runzhong and Li, Tianlin and Zhang, Xun and
+            Wang, Zhengyang and Miao, Xu and Yang, Tong},
+  note   = {Research manuscript}
+}</pre></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="wordmark" href="#top"><span class="wordmark-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Represent<b>Nav</b></span></a><p>See what I need. Dream what I want.</p><a href="#top">Back to top ↑</a></footer>
+  <dialog id="figure-dialog" aria-label="Expanded paper figure"><div class="dialog-toolbar"><p id="figure-caption"></p><button type="button" id="close-figure" aria-label="Close expanded figure">×</button></div><img id="expanded-figure" alt=""><a id="figure-original" target="_blank" rel="noopener">Open original image ↗</a></dialog>
+  <div id="page-status" class="page-status" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript-notice">Interactive illustrations require JavaScript. Paper and code: coming soon. Watch the demonstrations: <a href="assets/videos/pointgoal-obstacles-captioned.mp4">PointGoal</a> · <a href="assets/videos/vln-user4-captioned.mp4">VLN</a> · <a href="assets/videos/track-bumi-trim12-captioned.mp4">Track Bumi</a>.</p></noscript>
+  <script type="module" src="js/app.mjs"></script>
+</body>
+</html>

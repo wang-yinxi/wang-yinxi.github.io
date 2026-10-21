@@ -1,0 +1,5086 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "vln",
+      "title": "Explore a four-view scene",
+      "task": "VLN",
+      "prompt": "Move through the room toward the open passage.",
+      "description": "An authored VLNVerse scene with synchronized cameras, recorded history and same-pose occupancy.",
+      "inputKind": "simulation-rgb",
+      "selectedCamera": "front",
+      "hasTarget": false,
+      "rgbSize": [
+        512,
+        512
+      ],
+      "grid": {
+        "dims": [
+          120,
+          80,
+          20
+        ],
+        "min": [
+          -2,
+          -2,
+          0
+        ],
+        "max": [
+          4,
+          2,
+          2
+        ]
+      },
+      "provenance": "Paired simulation illustration: native four-camera RGB, rendered semantic IDs and metric depth, with same-scene mesh occupancy. Display readouts are illustrations, not measured model predictions.",
+      "egoMotionAvailable": true,
+      "targetMotionAvailable": false,
+      "motionSource": "Recorded 30 Hz poses; each frame uses the causal 0.6-second history ending at that frame.",
+      "coordinateFrame": "per-frame robot body: x forward, y left, z up",
+      "motionCoordinateFrame": "per-frame-body",
+      "source": {
+        "type": "native-isaac-capture",
+        "scene": "kujiale_0006",
+        "renderer": "Isaac Sim 5.1 RTX",
+        "currentSourceIndex": 18,
+        "views": "front, right, back, left",
+        "sourceRgb": "unannotated native RGB",
+        "occupancy": "same authored scene, cropped in each frame body coordinates",
+        "semanticIllustrationProvenance": "data/vln-generated-semantic-import.json"
+      },
+      "viewAvailability": {
+        "available": 4,
+        "required": 4,
+        "synchronized": true
+      },
+      "frames": [
+        {
+          "time": 0.0,
+          "referenceTime": 0.0,
+          "sourceTime": 0.6,
+          "sourceFrameIndex": 18,
+          "robotPose": [
+            0.6935553952037887,
+            0.9817256736026128,
+            0.5893857272541655
+          ],
+          "history": [
+            {
+              "time": -0.6,
+              "sourceIndex": 0,
+              "sourceTime": 0.0,
+              "robotPose": [
+                0.5335000281563147,
+                0.8060597938980205,
+                0.3733857272541653
+              ]
+            },
+            {
+              "time": -0.4,
+              "sourceIndex": 6,
+              "sourceTime": 0.2,
+              "robotPose": [
+                0.5561274451542841,
+                0.8286872108959891,
+                0.40938572725416533
+              ]
+            },
+            {
+              "time": -0.2,
+              "sourceIndex": 12,
+              "sourceTime": 0.4,
+              "robotPose": [
+                0.6052552773902145,
+                0.8913362219678529,
+                0.4813857272541654
+              ]
+            },
+            {
+              "time": 0.0,
+              "sourceIndex": 18,
+              "sourceTime": 0.6,
+              "robotPose": [
+                0.6935553952037887,
+                0.9817256736026128,
+                0.5893857272541655
+              ]
+            }
+          ],
+          "temporalAvailable": true,
+          "rgbSize": [
+            512,
+            512
+          ],
+          "scene": "assets/cases/vln/history-frame-0-front-rgb.jpg",
+          "views": [
+            {
+              "key": "front",
+              "label": "Front",
+              "url": "assets/cases/vln/history-frame-0-front-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-0-front-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-0-front-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-0-front-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-0-front-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-0-front-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-0-front-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-0-front-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-0-front-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 0.0,
+              "camera": {
+                "key": "front",
+                "position": [
+                  0.8182477371620969,
+                  1.0651032476675395,
+                  1.0
+                ],
+                "yaw": 0.5893857272541655,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-0-front-rgb.jpg",
+                "depth": "frame-0-front-depth-m.npy",
+                "semantic": "frame-0-front-semantic-labels.png",
+                "validDepth": 262144,
+                "nativeSourceHashes": {
+                  "rgb": "7809f7440a485a0ed39c8bed4af8401efe95e5c1e6082c5dd0acf086db1c44d7",
+                  "semantic": "8810397f455df69924911e5cebe4add4edbc1cba952f795edb466acbc112ca9c",
+                  "depth": "72162d9484e8c5f223a1a86617c4c56fc0ad747a0670bee252fd60f2bf17a069"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            },
+            {
+              "key": "right",
+              "label": "Right",
+              "url": "assets/cases/vln/history-frame-0-right-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-0-right-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-0-right-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-0-right-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-0-right-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-0-right-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-0-right-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-0-right-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-0-right-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 0.0,
+              "camera": {
+                "key": "right",
+                "position": [
+                  0.7769329692687155,
+                  0.8570333316443046,
+                  1.0
+                ],
+                "yaw": -0.9814105995407311,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-0-right-rgb.jpg",
+                "depth": "frame-0-right-depth-m.npy",
+                "semantic": "frame-0-right-semantic-labels.png",
+                "validDepth": 258623,
+                "nativeSourceHashes": {
+                  "rgb": "23b978a965e78ce4d1b0d74f578e89640849f1eef0d9efa0ae703868e6a6d489",
+                  "semantic": "433f2902941cf3cdbfb826069d838e76ac9de44bbe450fba0be73712fd8fbe1b",
+                  "depth": "7584564c9b9c2639a97190230379df262e5103448c04f2f6d0aeccb6c54ce8b1"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            },
+            {
+              "key": "back",
+              "label": "Back",
+              "url": "assets/cases/vln/history-frame-0-back-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-0-back-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-0-back-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-0-back-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-0-back-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-0-back-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-0-back-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-0-back-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-0-back-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 0.0,
+              "camera": {
+                "key": "back",
+                "position": [
+                  0.5688630532454806,
+                  0.898348099537686,
+                  1.0
+                ],
+                "yaw": 3.7309783808439585,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-0-back-rgb.jpg",
+                "depth": "frame-0-back-depth-m.npy",
+                "semantic": "frame-0-back-semantic-labels.png",
+                "validDepth": 261806,
+                "nativeSourceHashes": {
+                  "rgb": "5deb440dd377727ae690af8810b1d2e418377eccead169b11bdf5615a76199aa",
+                  "semantic": "1c9d77a540de0b3cd2df523f31c60fddcc82967dd7833e359cc9586f17c8c138",
+                  "depth": "daef7a649a4c02a22e21257fd3e65afd248eeef5e4cb3f9f6f955a50664e6471"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            },
+            {
+              "key": "left",
+              "label": "Left",
+              "url": "assets/cases/vln/history-frame-0-left-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-0-left-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-0-left-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-0-left-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-0-left-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-0-left-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-0-left-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-0-left-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-0-left-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 0.0,
+              "camera": {
+                "key": "left",
+                "position": [
+                  0.610177821138862,
+                  1.106418015560921,
+                  1.0
+                ],
+                "yaw": 2.160182054049062,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-0-left-rgb.jpg",
+                "depth": "frame-0-left-depth-m.npy",
+                "semantic": "frame-0-left-semantic-labels.png",
+                "validDepth": 262144,
+                "nativeSourceHashes": {
+                  "rgb": "f3aa0dcac272807da612fc2ae8314fd68b8007d292e4a19d4d4d6a061a933de7",
+                  "semantic": "b45cda38cb3d4e0c22d64c645b272609cd1ba132ee47703943e3114a7ccdc9a4",
+                  "depth": "156a922ca19a893dee8846ac2c63b7065cc60f66e09d20489a5a0e0fa0c7e38a"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            }
+          ],
+          "semantic": "assets/cases/vln/history-frame-0-front-semantic.png",
+          "latentSemantic": "assets/cases/vln/history-frame-0-front-latent-semantic.png",
+          "semanticAvailable": true,
+          "depth": "assets/cases/vln/history-frame-0-front-depth.png",
+          "latentDepth": "assets/cases/vln/history-frame-0-front-latent-depth.png",
+          "box": null,
+          "latentBox": null,
+          "boxEmbedded": false,
+          "voxels": "assets/native-occ/vlnverse/frame-0/readout-voxels.bin",
+          "latentVoxels": "assets/native-occ/vlnverse/frame-0/latent-voxels.bin",
+          "latentFallback": {
+            "orbit": "assets/native-occ/vlnverse/frame-0/latent-orbit.png",
+            "top": "assets/native-occ/vlnverse/frame-0/latent-top.png",
+            "side": "assets/native-occ/vlnverse/frame-0/latent-side.png"
+          },
+          "occupancyAnchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "occupancyCoordinateFrame": "per-frame-body",
+          "motionCoordinateFrame": "per-frame-body",
+          "egoMotion": [
+            [
+              -0.2306952,
+              -0.0570611
+            ],
+            [
+              -0.1993079,
+              -0.0508288
+            ],
+            [
+              -0.1236453,
+              -0.0260575
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "targetMotion": null,
+          "motionTimes": [
+            -0.6,
+            -0.4,
+            -0.2,
+            0.0
+          ],
+          "egoMotionAvailable": true,
+          "targetMotionAvailable": false,
+          "fallback": {
+            "orbit": "assets/native-occ/vlnverse/frame-0/readout-orbit.png",
+            "top": "assets/native-occ/vlnverse/frame-0/readout-top.png",
+            "side": "assets/native-occ/vlnverse/frame-0/readout-side.png"
+          },
+          "provenance": "Paired simulation illustration: native four-camera RGB, rendered semantic IDs and metric depth, with same-scene mesh occupancy. Display readouts are illustrations, not measured model predictions.",
+          "readoutKind": "simulation-derived-illustration",
+          "depthProvenance": "Same-render metric depth; median to32x32, inverse-distance range0.9–8m, CLS/latent16/12-cell low-pass. Source metric depth retained.",
+          "semanticProvenance": "Native source class IDs retained; GPT-image2 display illustration generated from the corresponding RGB, with distinct CLS and latent branches.",
+          "occupancyProvenance": "Same-scene meshes revoxelized at this frame pose; separately audited display transform; source volume retained.",
+          "sourceRgbSha256": "05dca494548f5f8dd86cb47325671c011945fc3a36f940b19d99df906d4b02f4",
+          "voxelSha256": "1a4fb2050e65ac9bd988299ccf6d3c6b26100b0c6ea6fc1df266b5af8642c6d8",
+          "latentVoxelSha256": "2a09d6db52613dced08af134de11313d0bf5e2f5fc0a089c9e205c3f040ebe82"
+        },
+        {
+          "time": 0.4,
+          "referenceTime": 0.4,
+          "sourceTime": 1.0,
+          "sourceFrameIndex": 30,
+          "robotPose": [
+            0.9881774031905772,
+            1.177135906787104,
+            0.8493857272541653
+          ],
+          "history": [
+            {
+              "time": -0.2,
+              "sourceIndex": 12,
+              "sourceTime": 0.4,
+              "robotPose": [
+                0.6052552773902145,
+                0.8913362219678529,
+                0.4813857272541654
+              ]
+            },
+            {
+              "time": 0.0,
+              "sourceIndex": 18,
+              "sourceTime": 0.6,
+              "robotPose": [
+                0.6935553952037887,
+                0.9817256736026128,
+                0.5893857272541655
+              ]
+            },
+            {
+              "time": 0.2,
+              "sourceIndex": 24,
+              "sourceTime": 0.8,
+              "robotPose": [
+                0.8298357091597781,
+                1.0707364381317088,
+                0.7193857272541655
+              ]
+            },
+            {
+              "time": 0.4,
+              "sourceIndex": 30,
+              "sourceTime": 1.0,
+              "robotPose": [
+                0.9881774031905772,
+                1.177135906787104,
+                0.8493857272541653
+              ]
+            }
+          ],
+          "temporalAvailable": true,
+          "rgbSize": [
+            512,
+            512
+          ],
+          "scene": "assets/cases/vln/history-frame-1-front-rgb.jpg",
+          "views": [
+            {
+              "key": "front",
+              "label": "Front",
+              "url": "assets/cases/vln/history-frame-1-front-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-1-front-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-1-front-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-1-front-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-1-front-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-1-front-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-1-front-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-1-front-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-1-front-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 0.4,
+              "camera": {
+                "key": "front",
+                "position": [
+                  1.0872440800531675,
+                  1.2897671348519844,
+                  1.0
+                ],
+                "yaw": 0.8493857272541653,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-1-front-rgb.jpg",
+                "depth": "frame-1-front-depth-m.npy",
+                "semantic": "frame-1-front-semantic-labels.png",
+                "validDepth": 262144,
+                "nativeSourceHashes": {
+                  "rgb": "567065d14d352e26c36201d9ada0aef9a689fcef5d0b929122d02ae3d57c32f2",
+                  "semantic": "167ea075938e6cd519abfde204ea0ecbc0db9c4b2f1002c6772e05afe233e65a",
+                  "depth": "76ca188473d05de08ab75738d543ba8c7d1fe674447cb9869e70f11f7fae3c53"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            },
+            {
+              "key": "right",
+              "label": "Right",
+              "url": "assets/cases/vln/history-frame-1-right-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-1-right-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-1-right-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-1-right-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-1-right-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-1-right-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-1-right-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-1-right-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-1-right-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 0.4,
+              "camera": {
+                "key": "right",
+                "position": [
+                  1.1008086312554577,
+                  1.0780692299245136,
+                  1.0
+                ],
+                "yaw": -0.7214105995407313,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-1-right-rgb.jpg",
+                "depth": "frame-1-right-depth-m.npy",
+                "semantic": "frame-1-right-semantic-labels.png",
+                "validDepth": 262144,
+                "nativeSourceHashes": {
+                  "rgb": "130d2c5c5662abfbfa67a48fcdc3ad362cf48497c7c28287224cbd12df17a083",
+                  "semantic": "80317c0a6a71156d218c3a7479291fdbf6eeaf2e00b035a9f8f662c080438d39",
+                  "depth": "e9521a51ca1bc5b44d915da73242dbb2c3b166d7f5d769f5f3845b04e7348657"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            },
+            {
+              "key": "back",
+              "label": "Back",
+              "url": "assets/cases/vln/history-frame-1-back-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-1-back-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-1-back-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-1-back-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-1-back-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-1-back-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-1-back-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-1-back-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-1-back-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 0.4,
+              "camera": {
+                "key": "back",
+                "position": [
+                  0.8891107263279869,
+                  1.0645046787222234,
+                  1.0
+                ],
+                "yaw": 3.9909783808439583,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-1-back-rgb.jpg",
+                "depth": "frame-1-back-depth-m.npy",
+                "semantic": "frame-1-back-semantic-labels.png",
+                "validDepth": 258341,
+                "nativeSourceHashes": {
+                  "rgb": "2f6821624e8149111850af3d65596f30c4df7be78297ec0faab2f822e1eab9d3",
+                  "semantic": "1b02c2b7a1c72b7384c2776ff616f8dbfde2bd2bbf3cde8caa7b657677736d60",
+                  "depth": "54a1c5bc6544ecb4a31e5bf1144d95eb12719c4b1aea8a5cca770ffb6e5722b4"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            },
+            {
+              "key": "left",
+              "label": "Left",
+              "url": "assets/cases/vln/history-frame-1-left-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-1-left-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-1-left-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-1-left-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-1-left-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-1-left-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-1-left-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-1-left-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-1-left-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 0.4,
+              "camera": {
+                "key": "left",
+                "position": [
+                  0.8755461751256968,
+                  1.2762025836496942,
+                  1.0
+                ],
+                "yaw": 2.4201820540490617,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-1-left-rgb.jpg",
+                "depth": "frame-1-left-depth-m.npy",
+                "semantic": "frame-1-left-semantic-labels.png",
+                "validDepth": 262144,
+                "nativeSourceHashes": {
+                  "rgb": "7e7b0eb816743969ce246e6e675b54e94ce90c53b1a15a501c502e62095875a6",
+                  "semantic": "2cf7a1fd09b1a0ad15e8b6ea7ce2cf128984bf58876e39cecceb3a1656907c03",
+                  "depth": "e6fbc30f4bb675607c581968d0aaa880325b85ed096752afc7353aa854d58c8c"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            }
+          ],
+          "semantic": "assets/cases/vln/history-frame-1-front-semantic.png",
+          "latentSemantic": "assets/cases/vln/history-frame-1-front-latent-semantic.png",
+          "semanticAvailable": true,
+          "depth": "assets/cases/vln/history-frame-1-front-depth.png",
+          "latentDepth": "assets/cases/vln/history-frame-1-front-latent-depth.png",
+          "box": null,
+          "latentBox": null,
+          "boxEmbedded": false,
+          "voxels": "assets/native-occ/vlnverse/frame-1/readout-voxels.bin",
+          "latentVoxels": "assets/native-occ/vlnverse/frame-1/latent-voxels.bin",
+          "latentFallback": {
+            "orbit": "assets/native-occ/vlnverse/frame-1/latent-orbit.png",
+            "top": "assets/native-occ/vlnverse/frame-1/latent-top.png",
+            "side": "assets/native-occ/vlnverse/frame-1/latent-side.png"
+          },
+          "occupancyAnchor": [
+            0.3535329290581103,
+            -0.0013247244912172051,
+            0.2599999999999998
+          ],
+          "occupancyCoordinateFrame": "per-frame-body",
+          "motionCoordinateFrame": "per-frame-body",
+          "egoMotion": [
+            [
+              -0.4674986,
+              0.0987718
+            ],
+            [
+              -0.3413101,
+              0.0921666
+            ],
+            [
+              -0.1844686,
+              0.0486239
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "targetMotion": null,
+          "motionTimes": [
+            -0.2,
+            0.0,
+            0.2,
+            0.4
+          ],
+          "egoMotionAvailable": true,
+          "targetMotionAvailable": false,
+          "fallback": {
+            "orbit": "assets/native-occ/vlnverse/frame-1/readout-orbit.png",
+            "top": "assets/native-occ/vlnverse/frame-1/readout-top.png",
+            "side": "assets/native-occ/vlnverse/frame-1/readout-side.png"
+          },
+          "provenance": "Paired simulation illustration: native four-camera RGB, rendered semantic IDs and metric depth, with same-scene mesh occupancy. Display readouts are illustrations, not measured model predictions.",
+          "readoutKind": "simulation-derived-illustration",
+          "depthProvenance": "Same-render metric depth; median to32x32, inverse-distance range0.9–8m, CLS/latent16/12-cell low-pass. Source metric depth retained.",
+          "semanticProvenance": "Native source class IDs retained; GPT-image2 display illustration generated from the corresponding RGB, with distinct CLS and latent branches.",
+          "occupancyProvenance": "Same-scene meshes revoxelized at this frame pose; separately audited display transform; source volume retained.",
+          "sourceRgbSha256": "e9cbd29c7e366bd80803530e004bdbf8917ac81824ee39d5a04b9639176aa3a4",
+          "voxelSha256": "f4afccd91cae79879c06bb1c3eb447447130aaf37336558191e174b7ae6fc50e",
+          "latentVoxelSha256": "b6d59c5feab40cd91a8853926c094b5ea2a3815ef1a8882fbde964344c551c6f"
+        },
+        {
+          "time": 0.8,
+          "referenceTime": 0.8,
+          "sourceTime": 1.4,
+          "sourceFrameIndex": 42,
+          "robotPose": [
+            1.2454696057944403,
+            1.4594856259286662,
+            1.1093857272541652
+          ],
+          "history": [
+            {
+              "time": 0.2,
+              "sourceIndex": 24,
+              "sourceTime": 0.8,
+              "robotPose": [
+                0.8298357091597781,
+                1.0707364381317088,
+                0.7193857272541655
+              ]
+            },
+            {
+              "time": 0.4,
+              "sourceIndex": 30,
+              "sourceTime": 1.0,
+              "robotPose": [
+                0.9881774031905772,
+                1.177135906787104,
+                0.8493857272541653
+              ]
+            },
+            {
+              "time": 0.6,
+              "sourceIndex": 36,
+              "sourceTime": 1.2,
+              "robotPose": [
+                1.1373319204715129,
+                1.3078181129582767,
+                0.9793857272541652
+              ]
+            },
+            {
+              "time": 0.8,
+              "sourceIndex": 42,
+              "sourceTime": 1.4,
+              "robotPose": [
+                1.2454696057944403,
+                1.4594856259286662,
+                1.1093857272541652
+              ]
+            }
+          ],
+          "temporalAvailable": true,
+          "rgbSize": [
+            512,
+            512
+          ],
+          "scene": "assets/cases/vln/history-frame-2-front-rgb.jpg",
+          "views": [
+            {
+              "key": "front",
+              "label": "Front",
+              "url": "assets/cases/vln/history-frame-2-front-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-2-front-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-2-front-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-2-front-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-2-front-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-2-front-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-2-front-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-2-front-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-2-front-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 0.8,
+              "camera": {
+                "key": "front",
+                "position": [
+                  1.3122513512103273,
+                  1.593799431917506,
+                  1.0
+                ],
+                "yaw": 1.1093857272541652,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-2-front-rgb.jpg",
+                "depth": "frame-2-front-depth-m.npy",
+                "semantic": "frame-2-front-semantic-labels.png",
+                "validDepth": 262144,
+                "nativeSourceHashes": {
+                  "rgb": "7820a31637b5ab4c8adf1bff936cb617c4676f59d54fbee97d5b566a815809e3",
+                  "semantic": "1a45a54c1e9e3ea66edb98042401d5831393122212c11c1586c5ac68ce8ece11",
+                  "depth": "01809ae164fc2ddd5ba8f01b7eb21127d8fa3940bbdab7dbc1a7ff799b694147"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            },
+            {
+              "key": "right",
+              "label": "Right",
+              "url": "assets/cases/vln/history-frame-2-right-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-2-right-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-2-right-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-2-right-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-2-right-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-2-right-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-2-right-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-2-right-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-2-right-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 0.8,
+              "camera": {
+                "key": "right",
+                "position": [
+                  1.3797834117832801,
+                  1.3927038805127794,
+                  1.0
+                ],
+                "yaw": -0.4614105995407314,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-2-right-rgb.jpg",
+                "depth": "frame-2-right-depth-m.npy",
+                "semantic": "frame-2-right-semantic-labels.png",
+                "validDepth": 262144,
+                "nativeSourceHashes": {
+                  "rgb": "48267c2f400f23e99f4ebcc688199bc0bf32dc278573e24f1f82e5a112037c5a",
+                  "semantic": "a92c06e66525d944ee4de22c0f62a3ecbe1f646ceba2d359fd4f5998cb62f665",
+                  "depth": "28da5ab711553b5cc60a88a6601e8fcc944150c36d72cc2c66ce57a0dae4a0c2"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            },
+            {
+              "key": "back",
+              "label": "Back",
+              "url": "assets/cases/vln/history-frame-2-back-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-2-back-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-2-back-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-2-back-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-2-back-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-2-back-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-2-back-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-2-back-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-2-back-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 0.8,
+              "camera": {
+                "key": "back",
+                "position": [
+                  1.1786878603785533,
+                  1.3251718199398266,
+                  1.0
+                ],
+                "yaw": 4.250978380843958,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-2-back-rgb.jpg",
+                "depth": "frame-2-back-depth-m.npy",
+                "semantic": "frame-2-back-semantic-labels.png",
+                "validDepth": 259849,
+                "nativeSourceHashes": {
+                  "rgb": "bba622cccbbcb0ef854a4412f56d8f3b4aa1f75c1e843aa98e438db185c4a60a",
+                  "semantic": "e28fd989376b6deb2d02f0ce969f5dc2944b700b6daf7ea24b294aeb3a56c95d",
+                  "depth": "7c7dcc037ae2083b95732ff2001091fbb7a442c07147e1a7029be4e32d6029bb"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            },
+            {
+              "key": "left",
+              "label": "Left",
+              "url": "assets/cases/vln/history-frame-2-left-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-2-left-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-2-left-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-2-left-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-2-left-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-2-left-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-2-left-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-2-left-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-2-left-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 0.8,
+              "camera": {
+                "key": "left",
+                "position": [
+                  1.1111557998056005,
+                  1.5262673713445531,
+                  1.0
+                ],
+                "yaw": 2.6801820540490615,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-2-left-rgb.jpg",
+                "depth": "frame-2-left-depth-m.npy",
+                "semantic": "frame-2-left-semantic-labels.png",
+                "validDepth": 262144,
+                "nativeSourceHashes": {
+                  "rgb": "bec85b394c1f6aa2a0d199ae416318315063ae56d9f8bb6a31667d8ebf58d528",
+                  "semantic": "092e5691625fdc9314e6fa6a174b20029d27013abdcf12004a9948704a0d6c81",
+                  "depth": "89431ddf5100b07085e999d542c87a757330658499bd53bfa943bb5d24437679"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            }
+          ],
+          "semantic": "assets/cases/vln/history-frame-2-front-semantic.png",
+          "latentSemantic": "assets/cases/vln/history-frame-2-front-latent-semantic.png",
+          "semanticAvailable": true,
+          "depth": "assets/cases/vln/history-frame-2-front-depth.png",
+          "latentDepth": "assets/cases/vln/history-frame-2-front-latent-depth.png",
+          "box": null,
+          "latentBox": null,
+          "boxEmbedded": false,
+          "voxels": "assets/native-occ/vlnverse/frame-2/readout-voxels.bin",
+          "latentVoxels": "assets/native-occ/vlnverse/frame-2/latent-voxels.bin",
+          "latentFallback": {
+            "orbit": "assets/native-occ/vlnverse/frame-2/latent-orbit.png",
+            "top": "assets/native-occ/vlnverse/frame-2/latent-top.png",
+            "side": "assets/native-occ/vlnverse/frame-2/latent-side.png"
+          },
+          "occupancyAnchor": [
+            0.7243596085929374,
+            0.09037159585611765,
+            0.5199999999999997
+          ],
+          "occupancyCoordinateFrame": "per-frame-body",
+          "motionCoordinateFrame": "per-frame-body",
+          "egoMotion": [
+            [
+              -0.5331409,
+              0.1990935
+            ],
+            [
+              -0.3673726,
+              0.1046806
+            ],
+            [
+              -0.1839511,
+              0.0293051
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "targetMotion": null,
+          "motionTimes": [
+            0.2,
+            0.4,
+            0.6,
+            0.8
+          ],
+          "egoMotionAvailable": true,
+          "targetMotionAvailable": false,
+          "fallback": {
+            "orbit": "assets/native-occ/vlnverse/frame-2/readout-orbit.png",
+            "top": "assets/native-occ/vlnverse/frame-2/readout-top.png",
+            "side": "assets/native-occ/vlnverse/frame-2/readout-side.png"
+          },
+          "provenance": "Paired simulation illustration: native four-camera RGB, rendered semantic IDs and metric depth, with same-scene mesh occupancy. Display readouts are illustrations, not measured model predictions.",
+          "readoutKind": "simulation-derived-illustration",
+          "depthProvenance": "Same-render metric depth; median to32x32, inverse-distance range0.9–8m, CLS/latent16/12-cell low-pass. Source metric depth retained.",
+          "semanticProvenance": "Native source class IDs retained; GPT-image2 display illustration generated from the corresponding RGB, with distinct CLS and latent branches.",
+          "occupancyProvenance": "Same-scene meshes revoxelized at this frame pose; separately audited display transform; source volume retained.",
+          "sourceRgbSha256": "95a7a35d7ebb5252b41f2704752f41d519e4e458d46ba52a048b007077cb1027",
+          "voxelSha256": "a8f4eb2959ab3b872e93b1336582ead99c994af65f55a9e3f4fbbeedda37e1de",
+          "latentVoxelSha256": "b3a6275b4227dd708bc14b21937c86d7b16aa22dceeab2c88f4cbdff34089e93"
+        },
+        {
+          "time": 1.2,
+          "referenceTime": 1.2,
+          "sourceTime": 1.8,
+          "sourceFrameIndex": 54,
+          "robotPose": [
+            1.3841755949360692,
+            1.790867368468838,
+            1.3500041938391545
+          ],
+          "history": [
+            {
+              "time": 0.6,
+              "sourceIndex": 36,
+              "sourceTime": 1.2,
+              "robotPose": [
+                1.1373319204715129,
+                1.3078181129582767,
+                0.9793857272541652
+              ]
+            },
+            {
+              "time": 0.8,
+              "sourceIndex": 42,
+              "sourceTime": 1.4,
+              "robotPose": [
+                1.2454696057944403,
+                1.4594856259286662,
+                1.1093857272541652
+              ]
+            },
+            {
+              "time": 1.0,
+              "sourceIndex": 48,
+              "sourceTime": 1.6,
+              "robotPose": [
+                1.3256077002935047,
+                1.6206621931152743,
+                1.239385727254165
+              ]
+            },
+            {
+              "time": 1.2,
+              "sourceIndex": 54,
+              "sourceTime": 1.8,
+              "robotPose": [
+                1.3841755949360692,
+                1.790867368468838,
+                1.3500041938391545
+              ]
+            }
+          ],
+          "temporalAvailable": true,
+          "rgbSize": [
+            512,
+            512
+          ],
+          "scene": "assets/cases/vln/history-frame-3-front-rgb.jpg",
+          "views": [
+            {
+              "key": "front",
+              "label": "Front",
+              "url": "assets/cases/vln/history-frame-3-front-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-3-front-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-3-front-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-3-front-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-3-front-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-3-front-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-3-front-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-3-front-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-3-front-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 1.2,
+              "camera": {
+                "key": "front",
+                "position": [
+                  1.4170259841957134,
+                  1.9372260099133727,
+                  1.0
+                ],
+                "yaw": 1.3500041938391545,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-3-front-rgb.jpg",
+                "depth": "frame-3-front-depth-m.npy",
+                "semantic": "frame-3-front-semantic-labels.png",
+                "validDepth": 262144,
+                "nativeSourceHashes": {
+                  "rgb": "2387f86b0e6931a495bf077b572ae3cb38724b14a725020fc718d4e18ace4965",
+                  "semantic": "b8484aa43131422b8c61f894d6d320d43167ff17ff1ed0b07ffa4c8cf40fa93f",
+                  "depth": "6197f1a1a7252646489cf18b4375087045d4f011d2d2ac70e8ad03689d844032"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            },
+            {
+              "key": "right",
+              "label": "Right",
+              "url": "assets/cases/vln/history-frame-3-right-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-3-right-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-3-right-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-3-right-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-3-right-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-3-right-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-3-right-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-3-right-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-3-right-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 1.2,
+              "camera": {
+                "key": "right",
+                "position": [
+                  1.5305342363806038,
+                  1.758016979209194,
+                  1.0
+                ],
+                "yaw": -0.22079213295574207,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-3-right-rgb.jpg",
+                "depth": "frame-3-right-depth-m.npy",
+                "semantic": "frame-3-right-semantic-labels.png",
+                "validDepth": 262144,
+                "nativeSourceHashes": {
+                  "rgb": "c5addb1183091cbd087d67b5e1eb35890213ebece2f8dc64a307e626a8bc6d91",
+                  "semantic": "23d8a58cd9e8ecbfd1a737b11dfdddf20a2670cc3ee77e7d2a93631d8522c204",
+                  "depth": "bd87026a3f7098a6a553aa3eaf7a54f0c81d3da4cf8060d41c257163b3fdc0b9"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            },
+            {
+              "key": "back",
+              "label": "Back",
+              "url": "assets/cases/vln/history-frame-3-back-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-3-back-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-3-back-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-3-back-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-3-back-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-3-back-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-3-back-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-3-back-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-3-back-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 1.2,
+              "camera": {
+                "key": "back",
+                "position": [
+                  1.3513252056764251,
+                  1.6445087270243035,
+                  1.0
+                ],
+                "yaw": 4.491596847428948,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-3-back-rgb.jpg",
+                "depth": "frame-3-back-depth-m.npy",
+                "semantic": "frame-3-back-semantic-labels.png",
+                "validDepth": 260286,
+                "nativeSourceHashes": {
+                  "rgb": "b5787b08e2d2aeeda4060114688ebf4427e41048e577a96c7d39ab3e983529a0",
+                  "semantic": "c01573523fd38587afbf75e7bcf1b9f9241d0da18e35d5dcbb54e33d76f5c332",
+                  "depth": "38c8b8be91b1b74237833cb65c9b3598d9736bca324d952c63e60f18daf36a4b"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            },
+            {
+              "key": "left",
+              "label": "Left",
+              "url": "assets/cases/vln/history-frame-3-left-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-3-left-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-3-left-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-3-left-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-3-left-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-3-left-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-3-left-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-3-left-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-3-left-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 1.2,
+              "camera": {
+                "key": "left",
+                "position": [
+                  1.2378169534915346,
+                  1.8237177577284822,
+                  1.0
+                ],
+                "yaw": 2.9208005206340513,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-3-left-rgb.jpg",
+                "depth": "frame-3-left-depth-m.npy",
+                "semantic": "frame-3-left-semantic-labels.png",
+                "validDepth": 262144,
+                "nativeSourceHashes": {
+                  "rgb": "7fcde20b73d7ea86a6821f1d4dd581c50c7c68b2119d4ce939a261c141ac8d8f",
+                  "semantic": "9ca6be5f491a5a844dc85f39df1b6e8f978218ad340b24937cf274ce974f8cfa",
+                  "depth": "08dbaa1b06c91c81cd8b6994739ed5a34459480cc69c61de0edd81a712992658"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            }
+          ],
+          "semantic": "assets/cases/vln/history-frame-3-front-semantic.png",
+          "latentSemantic": "assets/cases/vln/history-frame-3-front-latent-semantic.png",
+          "semanticAvailable": true,
+          "depth": "assets/cases/vln/history-frame-3-front-depth.png",
+          "latentDepth": "assets/cases/vln/history-frame-3-front-latent-depth.png",
+          "box": null,
+          "latentBox": null,
+          "boxEmbedded": false,
+          "voxels": "assets/native-occ/vlnverse/frame-3/readout-voxels.bin",
+          "latentVoxels": "assets/native-occ/vlnverse/frame-3/latent-voxels.bin",
+          "latentFallback": {
+            "orbit": "assets/native-occ/vlnverse/frame-3/latent-orbit.png",
+            "top": "assets/native-occ/vlnverse/frame-3/latent-top.png",
+            "side": "assets/native-occ/vlnverse/frame-3/latent-side.png"
+          },
+          "occupancyAnchor": [
+            1.0238621446737444,
+            0.2887435737004781,
+            0.760618466584989
+          ],
+          "occupancyCoordinateFrame": "per-frame-body",
+          "motionCoordinateFrame": "per-frame-body",
+          "egoMotion": [
+            [
+              -0.5253823,
+              0.1350623
+            ],
+            [
+              -0.3537142,
+              0.0627653
+            ],
+            [
+              -0.1788998,
+              0.0198707
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "targetMotion": null,
+          "motionTimes": [
+            0.6,
+            0.8,
+            1.0,
+            1.2
+          ],
+          "egoMotionAvailable": true,
+          "targetMotionAvailable": false,
+          "fallback": {
+            "orbit": "assets/native-occ/vlnverse/frame-3/readout-orbit.png",
+            "top": "assets/native-occ/vlnverse/frame-3/readout-top.png",
+            "side": "assets/native-occ/vlnverse/frame-3/readout-side.png"
+          },
+          "provenance": "Paired simulation illustration: native four-camera RGB, rendered semantic IDs and metric depth, with same-scene mesh occupancy. Display readouts are illustrations, not measured model predictions.",
+          "readoutKind": "simulation-derived-illustration",
+          "depthProvenance": "Same-render metric depth; median to32x32, inverse-distance range0.9–8m, CLS/latent16/12-cell low-pass. Source metric depth retained.",
+          "semanticProvenance": "Native source class IDs retained; GPT-image2 display illustration generated from the corresponding RGB, with distinct CLS and latent branches.",
+          "occupancyProvenance": "Same-scene meshes revoxelized at this frame pose; separately audited display transform; source volume retained.",
+          "sourceRgbSha256": "735fa135a2861fd01cf86ed9ee2883d18f5915e99cae368f303b2dc2815f3afc",
+          "voxelSha256": "0691ff5d4f26417c0630aa5b9d6ec86516501538c78e36ff8de78272fd2e8dcc",
+          "latentVoxelSha256": "fa997be91db12f80d4003be118c9bb27f1832abf9bc920458fc44538768ff04e"
+        },
+        {
+          "time": 1.6,
+          "referenceTime": 1.6,
+          "sourceTime": 2.2,
+          "sourceFrameIndex": 66,
+          "robotPose": [
+            1.4498137243991618,
+            2.144578153129981,
+            1.4703153160063638
+          ],
+          "history": [
+            {
+              "time": 1.0,
+              "sourceIndex": 48,
+              "sourceTime": 1.6,
+              "robotPose": [
+                1.3256077002935047,
+                1.6206621931152743,
+                1.239385727254165
+              ]
+            },
+            {
+              "time": 1.2,
+              "sourceIndex": 54,
+              "sourceTime": 1.8,
+              "robotPose": [
+                1.3841755949360692,
+                1.790867368468838,
+                1.3500041938391545
+              ]
+            },
+            {
+              "time": 1.4,
+              "sourceIndex": 60,
+              "sourceTime": 2.0,
+              "robotPose": [
+                1.4235960620476424,
+                1.9664977382022801,
+                1.4246226604241439
+              ]
+            },
+            {
+              "time": 1.6,
+              "sourceIndex": 66,
+              "sourceTime": 2.2,
+              "robotPose": [
+                1.4498137243991618,
+                2.144578153129981,
+                1.4703153160063638
+              ]
+            }
+          ],
+          "temporalAvailable": true,
+          "rgbSize": [
+            512,
+            512
+          ],
+          "scene": "assets/cases/vln/history-frame-4-front-rgb.jpg",
+          "views": [
+            {
+              "key": "front",
+              "label": "Front",
+              "url": "assets/cases/vln/history-frame-4-front-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-4-front-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-4-front-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-4-front-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-4-front-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-4-front-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-4-front-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-4-front-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-4-front-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 1.6,
+              "camera": {
+                "key": "front",
+                "position": [
+                  1.4648605263217431,
+                  2.293821557513232,
+                  1.0
+                ],
+                "yaw": 1.4703153160063638,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-4-front-rgb.jpg",
+                "depth": "frame-4-front-depth-m.npy",
+                "semantic": "frame-4-front-semantic-labels.png",
+                "validDepth": 262144,
+                "nativeSourceHashes": {
+                  "rgb": "9cbd2769e458a60b06df0981554ee18037b93016638235e2018cdecccb75a100",
+                  "semantic": "15ec011883c2777ab990168e4126876aa3eececcd5da4518be067614318b9bd0",
+                  "depth": "c81144f38fee354bef9d76108b65a6c725940f1785cb1432f2dea8240b58646e"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            },
+            {
+              "key": "right",
+              "label": "Right",
+              "url": "assets/cases/vln/history-frame-4-right-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-4-right-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-4-right-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-4-right-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-4-right-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-4-right-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-4-right-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-4-right-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-4-right-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 1.6,
+              "camera": {
+                "key": "right",
+                "position": [
+                  1.599057128782413,
+                  2.1295313512073997,
+                  1.0
+                ],
+                "yaw": -0.10048101078853278,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-4-right-rgb.jpg",
+                "depth": "frame-4-right-depth-m.npy",
+                "semantic": "frame-4-right-semantic-labels.png",
+                "validDepth": 262144,
+                "nativeSourceHashes": {
+                  "rgb": "063894a3717a763f5a93f9043058e99398adbe829d82264478218fdf539b7047",
+                  "semantic": "208dca8381e48dcd7bfc6e223d06904fe329eeea68db1bc29570d1f90f7c49ac",
+                  "depth": "b2685e7b5e92bea44347e77936ebe0fac1191bdd531d04ada105600e6f7d9657"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            },
+            {
+              "key": "back",
+              "label": "Back",
+              "url": "assets/cases/vln/history-frame-4-back-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-4-back-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-4-back-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-4-back-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-4-back-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-4-back-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-4-back-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-4-back-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-4-back-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 1.6,
+              "camera": {
+                "key": "back",
+                "position": [
+                  1.4347669224765804,
+                  1.9953347487467297,
+                  1.0
+                ],
+                "yaw": 4.611907969596157,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-4-back-rgb.jpg",
+                "depth": "frame-4-back-depth-m.npy",
+                "semantic": "frame-4-back-semantic-labels.png",
+                "validDepth": 260506,
+                "nativeSourceHashes": {
+                  "rgb": "7501bc669993663a157e9e5d38f4a2e48e4fe40eb9b0199a90a8c79a7f9d1d4c",
+                  "semantic": "68df9e20dcca25e2fd43a9f822292bc19a9572849fc8f8dd9473bbb8202ba36e",
+                  "depth": "73872445f3bca22d49c3b8452970d10cb40bd5a40a74f815b24432c3d175af2a"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            },
+            {
+              "key": "left",
+              "label": "Left",
+              "url": "assets/cases/vln/history-frame-4-left-rgb.jpg",
+              "rgbSize": [
+                512,
+                512
+              ],
+              "semantic": "assets/cases/vln/history-frame-4-left-semantic.png",
+              "latentSemantic": "assets/cases/vln/history-frame-4-left-latent-semantic.png",
+              "semanticAvailable": true,
+              "semanticLabels": "assets/cases/vln/history-frame-4-left-semantic-labels.png",
+              "semanticGroundTruth": "assets/cases/vln/history-frame-4-left-semantic-gt.png",
+              "depth": "assets/cases/vln/history-frame-4-left-depth.png",
+              "latentDepth": "assets/cases/vln/history-frame-4-left-latent-depth.png",
+              "depthGroundTruth": "assets/cases/vln/history-frame-4-left-depth-gt.png",
+              "depthMetres": "assets/cases/vln/history-frame-4-left-depth-metres.npy",
+              "box": null,
+              "latentBox": null,
+              "referenceTime": 1.6,
+              "camera": {
+                "key": "left",
+                "position": [
+                  1.3005703200159107,
+                  2.159624955052562,
+                  1.0
+                ],
+                "yaw": 3.04111164280126,
+                "intrinsics": [
+                  [
+                    256,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    256,
+                    256
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "rgb": "frame-4-left-rgb.jpg",
+                "depth": "frame-4-left-depth-m.npy",
+                "semantic": "frame-4-left-semantic-labels.png",
+                "validDepth": 262144,
+                "nativeSourceHashes": {
+                  "rgb": "071df9adcc9aef1f35c0e05984a084284ca123d4f6abbdc3c665db3757cc7ae8",
+                  "semantic": "70aee6e03119bd4fec921aca318f20155f87b2fd7d11d5e18b3c7e5627213e02",
+                  "depth": "0f3844fc8a3868e0e7672800633488cfe8472a6420ab80cb90dae2bfb67df094"
+                },
+                "rgbSize": [
+                  512,
+                  512
+                ]
+              }
+            }
+          ],
+          "semantic": "assets/cases/vln/history-frame-4-front-semantic.png",
+          "latentSemantic": "assets/cases/vln/history-frame-4-front-latent-semantic.png",
+          "semanticAvailable": true,
+          "depth": "assets/cases/vln/history-frame-4-front-depth.png",
+          "latentDepth": "assets/cases/vln/history-frame-4-front-latent-depth.png",
+          "box": null,
+          "latentBox": null,
+          "boxEmbedded": false,
+          "voxels": "assets/native-occ/vlnverse/frame-4/readout-voxels.bin",
+          "latentVoxels": "assets/native-occ/vlnverse/frame-4/latent-voxels.bin",
+          "latentFallback": {
+            "orbit": "assets/native-occ/vlnverse/frame-4/latent-orbit.png",
+            "top": "assets/native-occ/vlnverse/frame-4/latent-top.png",
+            "side": "assets/native-occ/vlnverse/frame-4/latent-side.png"
+          },
+          "occupancyAnchor": [
+            1.2750362728748337,
+            0.5462920944639212,
+            0.8809295887521983
+          ],
+          "occupancyCoordinateFrame": "per-frame-body",
+          "motionCoordinateFrame": "per-frame-body",
+          "egoMotion": [
+            [
+              -0.5337327,
+              0.0710245
+            ],
+            [
+              -0.358511,
+              0.0298256
+            ],
+            [
+              -0.1798121,
+              0.0082218
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "targetMotion": null,
+          "motionTimes": [
+            1.0,
+            1.2,
+            1.4,
+            1.6
+          ],
+          "egoMotionAvailable": true,
+          "targetMotionAvailable": false,
+          "fallback": {
+            "orbit": "assets/native-occ/vlnverse/frame-4/readout-orbit.png",
+            "top": "assets/native-occ/vlnverse/frame-4/readout-top.png",
+            "side": "assets/native-occ/vlnverse/frame-4/readout-side.png"
+          },
+          "provenance": "Paired simulation illustration: native four-camera RGB, rendered semantic IDs and metric depth, with same-scene mesh occupancy. Display readouts are illustrations, not measured model predictions.",
+          "readoutKind": "simulation-derived-illustration",
+          "depthProvenance": "Same-render metric depth; median to32x32, inverse-distance range0.9–8m, CLS/latent16/12-cell low-pass. Source metric depth retained.",
+          "semanticProvenance": "Native source class IDs retained; GPT-image2 display illustration generated from the corresponding RGB, with distinct CLS and latent branches.",
+          "occupancyProvenance": "Same-scene meshes revoxelized at this frame pose; separately audited display transform; source volume retained.",
+          "sourceRgbSha256": "eb682f61741a113ea3a9f6a8bcfeeab5c76f49e761a7c5308130ada5098e27aa",
+          "voxelSha256": "5ef9c6002679242633c7d6badbb8a2cfc4f9d09fdb88711c6b7f608efe124e57",
+          "latentVoxelSha256": "c4e56fd7eb3212dbb83d8f3cba50c5e42a1fa213e23905cf728468f50440d89d"
+        }
+      ],
+      "input": "assets/cases/vln/history-frame-0-front-rgb.jpg",
+      "views": [
+        {
+          "key": "front",
+          "label": "Front",
+          "url": "assets/cases/vln/history-frame-0-front-rgb.jpg",
+          "rgbSize": [
+            512,
+            512
+          ],
+          "semantic": "assets/cases/vln/history-frame-0-front-semantic.png",
+          "latentSemantic": "assets/cases/vln/history-frame-0-front-latent-semantic.png",
+          "semanticAvailable": true,
+          "semanticLabels": "assets/cases/vln/history-frame-0-front-semantic-labels.png",
+          "semanticGroundTruth": "assets/cases/vln/history-frame-0-front-semantic-gt.png",
+          "depth": "assets/cases/vln/history-frame-0-front-depth.png",
+          "latentDepth": "assets/cases/vln/history-frame-0-front-latent-depth.png",
+          "depthGroundTruth": "assets/cases/vln/history-frame-0-front-depth-gt.png",
+          "depthMetres": "assets/cases/vln/history-frame-0-front-depth-metres.npy",
+          "box": null,
+          "latentBox": null,
+          "referenceTime": 0.0,
+          "camera": {
+            "key": "front",
+            "position": [
+              0.8182477371620969,
+              1.0651032476675395,
+              1.0
+            ],
+            "yaw": 0.5893857272541655,
+            "intrinsics": [
+              [
+                256,
+                0,
+                256
+              ],
+              [
+                0,
+                256,
+                256
+              ],
+              [
+                0,
+                0,
+                1
+              ]
+            ],
+            "rgb": "frame-0-front-rgb.jpg",
+            "depth": "frame-0-front-depth-m.npy",
+            "semantic": "frame-0-front-semantic-labels.png",
+            "validDepth": 262144,
+            "nativeSourceHashes": {
+              "rgb": "7809f7440a485a0ed39c8bed4af8401efe95e5c1e6082c5dd0acf086db1c44d7",
+              "semantic": "8810397f455df69924911e5cebe4add4edbc1cba952f795edb466acbc112ca9c",
+              "depth": "72162d9484e8c5f223a1a86617c4c56fc0ad747a0670bee252fd60f2bf17a069"
+            },
+            "rgbSize": [
+              512,
+              512
+            ]
+          }
+        },
+        {
+          "key": "right",
+          "label": "Right",
+          "url": "assets/cases/vln/history-frame-0-right-rgb.jpg",
+          "rgbSize": [
+            512,
+            512
+          ],
+          "semantic": "assets/cases/vln/history-frame-0-right-semantic.png",
+          "latentSemantic": "assets/cases/vln/history-frame-0-right-latent-semantic.png",
+          "semanticAvailable": true,
+          "semanticLabels": "assets/cases/vln/history-frame-0-right-semantic-labels.png",
+          "semanticGroundTruth": "assets/cases/vln/history-frame-0-right-semantic-gt.png",
+          "depth": "assets/cases/vln/history-frame-0-right-depth.png",
+          "latentDepth": "assets/cases/vln/history-frame-0-right-latent-depth.png",
+          "depthGroundTruth": "assets/cases/vln/history-frame-0-right-depth-gt.png",
+          "depthMetres": "assets/cases/vln/history-frame-0-right-depth-metres.npy",
+          "box": null,
+          "latentBox": null,
+          "referenceTime": 0.0,
+          "camera": {
+            "key": "right",
+            "position": [
+              0.7769329692687155,
+              0.8570333316443046,
+              1.0
+            ],
+            "yaw": -0.9814105995407311,
+            "intrinsics": [
+              [
+                256,
+                0,
+                256
+              ],
+              [
+                0,
+                256,
+                256
+              ],
+              [
+                0,
+                0,
+                1
+              ]
+            ],
+            "rgb": "frame-0-right-rgb.jpg",
+            "depth": "frame-0-right-depth-m.npy",
+            "semantic": "frame-0-right-semantic-labels.png",
+            "validDepth": 258623,
+            "nativeSourceHashes": {
+              "rgb": "23b978a965e78ce4d1b0d74f578e89640849f1eef0d9efa0ae703868e6a6d489",
+              "semantic": "433f2902941cf3cdbfb826069d838e76ac9de44bbe450fba0be73712fd8fbe1b",
+              "depth": "7584564c9b9c2639a97190230379df262e5103448c04f2f6d0aeccb6c54ce8b1"
+            },
+            "rgbSize": [
+              512,
+              512
+            ]
+          }
+        },
+        {
+          "key": "back",
+          "label": "Back",
+          "url": "assets/cases/vln/history-frame-0-back-rgb.jpg",
+          "rgbSize": [
+            512,
+            512
+          ],
+          "semantic": "assets/cases/vln/history-frame-0-back-semantic.png",
+          "latentSemantic": "assets/cases/vln/history-frame-0-back-latent-semantic.png",
+          "semanticAvailable": true,
+          "semanticLabels": "assets/cases/vln/history-frame-0-back-semantic-labels.png",
+          "semanticGroundTruth": "assets/cases/vln/history-frame-0-back-semantic-gt.png",
+          "depth": "assets/cases/vln/history-frame-0-back-depth.png",
+          "latentDepth": "assets/cases/vln/history-frame-0-back-latent-depth.png",
+          "depthGroundTruth": "assets/cases/vln/history-frame-0-back-depth-gt.png",
+          "depthMetres": "assets/cases/vln/history-frame-0-back-depth-metres.npy",
+          "box": null,
+          "latentBox": null,
+          "referenceTime": 0.0,
+          "camera": {
+            "key": "back",
+            "position": [
+              0.5688630532454806,
+              0.898348099537686,
+              1.0
+            ],
+            "yaw": 3.7309783808439585,
+            "intrinsics": [
+              [
+                256,
+                0,
+                256
+              ],
+              [
+                0,
+                256,
+                256
+              ],
+              [
+                0,
+                0,
+                1
+              ]
+            ],
+            "rgb": "frame-0-back-rgb.jpg",
+            "depth": "frame-0-back-depth-m.npy",
+            "semantic": "frame-0-back-semantic-labels.png",
+            "validDepth": 261806,
+            "nativeSourceHashes": {
+              "rgb": "5deb440dd377727ae690af8810b1d2e418377eccead169b11bdf5615a76199aa",
+              "semantic": "1c9d77a540de0b3cd2df523f31c60fddcc82967dd7833e359cc9586f17c8c138",
+              "depth": "daef7a649a4c02a22e21257fd3e65afd248eeef5e4cb3f9f6f955a50664e6471"
+            },
+            "rgbSize": [
+              512,
+              512
+            ]
+          }
+        },
+        {
+          "key": "left",
+          "label": "Left",
+          "url": "assets/cases/vln/history-frame-0-left-rgb.jpg",
+          "rgbSize": [
+            512,
+            512
+          ],
+          "semantic": "assets/cases/vln/history-frame-0-left-semantic.png",
+          "latentSemantic": "assets/cases/vln/history-frame-0-left-latent-semantic.png",
+          "semanticAvailable": true,
+          "semanticLabels": "assets/cases/vln/history-frame-0-left-semantic-labels.png",
+          "semanticGroundTruth": "assets/cases/vln/history-frame-0-left-semantic-gt.png",
+          "depth": "assets/cases/vln/history-frame-0-left-depth.png",
+          "latentDepth": "assets/cases/vln/history-frame-0-left-latent-depth.png",
+          "depthGroundTruth": "assets/cases/vln/history-frame-0-left-depth-gt.png",
+          "depthMetres": "assets/cases/vln/history-frame-0-left-depth-metres.npy",
+          "box": null,
+          "latentBox": null,
+          "referenceTime": 0.0,
+          "camera": {
+            "key": "left",
+            "position": [
+              0.610177821138862,
+              1.106418015560921,
+              1.0
+            ],
+            "yaw": 2.160182054049062,
+            "intrinsics": [
+              [
+                256,
+                0,
+                256
+              ],
+              [
+                0,
+                256,
+                256
+              ],
+              [
+                0,
+                0,
+                1
+              ]
+            ],
+            "rgb": "frame-0-left-rgb.jpg",
+            "depth": "frame-0-left-depth-m.npy",
+            "semantic": "frame-0-left-semantic-labels.png",
+            "validDepth": 262144,
+            "nativeSourceHashes": {
+              "rgb": "f3aa0dcac272807da612fc2ae8314fd68b8007d292e4a19d4d4d6a061a933de7",
+              "semantic": "b45cda38cb3d4e0c22d64c645b272609cd1ba132ee47703943e3114a7ccdc9a4",
+              "depth": "156a922ca19a893dee8846ac2c63b7065cc60f66e09d20489a5a0e0fa0c7e38a"
+            },
+            "rgbSize": [
+              512,
+              512
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "pointgoal",
+      "title": "Navigate to a point goal",
+      "task": "PointGoal",
+      "prompt": "Reach the supplied waypoint (7.04, 5.95) m in the current robot frame.",
+      "description": "A supplied four-camera PointGoal recording with paired occupancy and recorded robot history.",
+      "inputKind": "simulation-rgb",
+      "selectedCamera": "front",
+      "hasTarget": false,
+      "rgbSize": [
+        406,
+        406
+      ],
+      "grid": {
+        "dims": [
+          120,
+          80,
+          20
+        ],
+        "min": [
+          -2,
+          -2,
+          0
+        ],
+        "max": [
+          4,
+          2,
+          2
+        ]
+      },
+      "coordinateFrame": "per-frame robot body: x forward, y left, z up",
+      "motionCoordinateFrame": "per-frame-body",
+      "egoMotionAvailable": true,
+      "targetMotionAvailable": false,
+      "source": {
+        "type": "user-paired-pointgoal-recording",
+        "dataset": "long_1018",
+        "currentSourceStep": 4,
+        "sourceRgb": "unannotated supplied four-camera strips",
+        "sourceDepthAvailable": false,
+        "sourceSemanticAvailable": false,
+        "semanticIllustrationProvenance": "data/pointgoal-generated-semantic-import.json",
+        "samplingIntervalSeconds": 0.2,
+        "samplingEvidence": "All consecutive world translations equal rotation(yaw) @ action_xy * 0.2; maximum residual 3.31e-7m. Preview video is encoded at10fps (2x playback)."
+      },
+      "provenance": "Paired recorded RGB, occupancy and robot history; semantic/depth displays are declared illustrations, not model predictions or source ground truth.",
+      "viewAvailability": {
+        "available": 4,
+        "required": 4,
+        "synchronized": true
+      },
+      "frames": [
+        {
+          "time": 0.0,
+          "referenceTime": 0.0,
+          "sourceTime": 0.6,
+          "sourceStep": 4,
+          "sourceFrameIndex": 3,
+          "rgbSize": [
+            406,
+            406
+          ],
+          "temporalAvailable": true,
+          "robotPose": [
+            -2.0427050590515137,
+            -6.8025126457214355,
+            0.809593422540514
+          ],
+          "history": [
+            {
+              "time": -0.6,
+              "sourceStep": 1,
+              "robotPose": [
+                -2.4200961589813232,
+                -7.125,
+                0.41959353628280016
+              ]
+            },
+            {
+              "time": -0.4,
+              "sourceStep": 2,
+              "robotPose": [
+                -2.2901923656463623,
+                -7.050000190734863,
+                0.5495934087507918
+              ]
+            },
+            {
+              "time": -0.2,
+              "sourceStep": 3,
+              "robotPose": [
+                -2.184126377105713,
+                -6.943933963775635,
+                0.6795935015766196
+              ]
+            },
+            {
+              "time": 0.0,
+              "sourceStep": 4,
+              "robotPose": [
+                -2.0427050590515137,
+                -6.8025126457214355,
+                0.809593422540514
+              ]
+            }
+          ],
+          "motionTimes": [
+            -0.6,
+            -0.4,
+            -0.2,
+            0.0
+          ],
+          "pointGoal": [
+            7.0370357,
+            5.9549054
+          ],
+          "pointGoalWorld": [
+            -1.5,
+            2.4000000953674316
+          ],
+          "motionCoordinateFrame": "per-frame-body",
+          "egoMotion": [
+            [
+              -0.4938047,
+              0.0507842
+            ],
+            [
+              -0.3498976,
+              0.0084673
+            ],
+            [
+              -0.1999414,
+              0.0048386
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "targetMotion": null,
+          "egoMotionAvailable": true,
+          "targetMotionAvailable": false,
+          "views": [
+            {
+              "key": "front",
+              "label": "Front",
+              "url": "assets/cases/pointgoal-long1018/step-004-front-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "de0c1d06c8be473f3332fb5e9c23aea3be669ed13614ead55c10130ee9b91bce",
+              "referenceTime": 0.0,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-004-front-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-004-front-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-004-front-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-004-front-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-004-front-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            },
+            {
+              "key": "right",
+              "label": "Right",
+              "url": "assets/cases/pointgoal-long1018/step-004-right-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "34f9abe4d5c2a4c15b98e5dd7cf7584cb3e5206c9e67ba64f82d95d1bd840d59",
+              "referenceTime": 0.0,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-004-right-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-004-right-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-004-right-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-004-right-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-004-right-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            },
+            {
+              "key": "back",
+              "label": "Back",
+              "url": "assets/cases/pointgoal-long1018/step-004-back-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "521b46fe6c9adcbdfb2972f17dd271ce7066b58e444665f6ce9c7331e9d3c087",
+              "referenceTime": 0.0,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-004-back-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-004-back-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-004-back-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-004-back-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-004-back-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            },
+            {
+              "key": "left",
+              "label": "Left",
+              "url": "assets/cases/pointgoal-long1018/step-004-left-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "ee177566a58639829fb4b38cff06bef388f08634c7959f45b3e65245d48d82f1",
+              "referenceTime": 0.0,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-004-left-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-004-left-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-004-left-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-004-left-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-004-left-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            }
+          ],
+          "scene": "assets/cases/pointgoal-long1018/step-004-front-rgb.png",
+          "semantic": "assets/cases/pointgoal-long1018/step-004-front-semantic.png",
+          "semanticAvailable": true,
+          "latentSemantic": "assets/cases/pointgoal-long1018/step-004-front-latent-semantic.png",
+          "depth": "assets/cases/pointgoal-long1018/step-004-front-depth.png",
+          "latentDepth": "assets/cases/pointgoal-long1018/step-004-front-latent-depth.png",
+          "box": null,
+          "latentBox": null,
+          "boxEmbedded": false,
+          "voxels": "assets/native-occ/pointgoal-long1018/frame-0/readout-voxels.bin",
+          "latentVoxels": "assets/native-occ/pointgoal-long1018/frame-0/latent-voxels.bin",
+          "latentFallback": {
+            "orbit": "assets/native-occ/pointgoal-long1018/frame-0/latent-orbit.png",
+            "top": "assets/native-occ/pointgoal-long1018/frame-0/latent-top.png",
+            "side": "assets/native-occ/pointgoal-long1018/frame-0/latent-side.png"
+          },
+          "occupancyAnchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "occupancyCoordinateFrame": "per-frame-body",
+          "fallback": {
+            "orbit": "assets/native-occ/pointgoal-long1018/frame-0/readout-orbit.png",
+            "top": "assets/native-occ/pointgoal-long1018/frame-0/readout-top.png",
+            "side": "assets/native-occ/pointgoal-long1018/frame-0/readout-side.png"
+          },
+          "readoutKind": "recording-derived-illustration",
+          "depthProvenance": "Raycast of the same-step supplied occupancy using recorded intrinsics; assumed camera height0.8m, zero mount offset and pitch, four cardinal yaw offsets. Ground plane assumed atz0. No source depth GT. CLS/latent displays use16/12-cell low-pass respectively.",
+          "sourceRgbSha256": "de0c1d06c8be473f3332fb5e9c23aea3be669ed13614ead55c10130ee9b91bce",
+          "voxelSha256": "6c939ea5e8be5b25fa822ca187752389c42e88a80e572a4fc4f987d97ad20d75",
+          "latentVoxelSha256": "c66e108532059c07dbd099024707448dbde6d3500dcc27b4a8b3d8e7bfe308ab"
+        },
+        {
+          "time": 0.4,
+          "referenceTime": 0.4,
+          "sourceTime": 1.0,
+          "sourceStep": 6,
+          "sourceFrameIndex": 5,
+          "rgbSize": [
+            406,
+            406
+          ],
+          "temporalAvailable": true,
+          "robotPose": [
+            -1.7790411710739136,
+            -6.502798080444336,
+            1.0200786621085887
+          ],
+          "history": [
+            {
+              "time": -0.2,
+              "sourceStep": 3,
+              "robotPose": [
+                -2.184126377105713,
+                -6.943933963775635,
+                0.6795935015766196
+              ]
+            },
+            {
+              "time": 0.0,
+              "sourceStep": 4,
+              "robotPose": [
+                -2.0427050590515137,
+                -6.8025126457214355,
+                0.809593422540514
+              ]
+            },
+            {
+              "time": 0.2,
+              "sourceStep": 5,
+              "robotPose": [
+                -1.901283621788025,
+                -6.661091327667236,
+                0.9132046864046052
+              ]
+            },
+            {
+              "time": 0.4,
+              "sourceStep": 6,
+              "robotPose": [
+                -1.7790411710739136,
+                -6.502798080444336,
+                1.0200786621085887
+              ]
+            }
+          ],
+          "motionTimes": [
+            -0.2,
+            0.0,
+            0.2,
+            0.4
+          ],
+          "pointGoal": [
+            7.7325342,
+            4.42104
+          ],
+          "pointGoalWorld": [
+            -1.5,
+            2.4000000953674316
+          ],
+          "motionCoordinateFrame": "per-frame-body",
+          "egoMotion": [
+            [
+              -0.5878942,
+              0.1143471
+            ],
+            [
+              -0.3933766,
+              0.0678407
+            ],
+            [
+              -0.1988588,
+              0.0213341
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "targetMotion": null,
+          "egoMotionAvailable": true,
+          "targetMotionAvailable": false,
+          "views": [
+            {
+              "key": "front",
+              "label": "Front",
+              "url": "assets/cases/pointgoal-long1018/step-006-front-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "f29e35bb2c582ea461b991611fbe11e7bcd2b1f9eb0ac156d3d303a01043ab7e",
+              "referenceTime": 0.4,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-006-front-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-006-front-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-006-front-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-006-front-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-006-front-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            },
+            {
+              "key": "right",
+              "label": "Right",
+              "url": "assets/cases/pointgoal-long1018/step-006-right-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "a33d7903dc8608b15cfff4f3f80668352fcc818dcdff01f4e24a602eb3ed3925",
+              "referenceTime": 0.4,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-006-right-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-006-right-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-006-right-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-006-right-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-006-right-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            },
+            {
+              "key": "back",
+              "label": "Back",
+              "url": "assets/cases/pointgoal-long1018/step-006-back-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "4f01197542081dc6e642f10314f67bc3573d92fea3e24a9fe0568313af52f4b2",
+              "referenceTime": 0.4,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-006-back-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-006-back-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-006-back-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-006-back-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-006-back-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            },
+            {
+              "key": "left",
+              "label": "Left",
+              "url": "assets/cases/pointgoal-long1018/step-006-left-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "dca117b01b403307937d76ca748e04d897109fe846d8dd4185c538f354f353b1",
+              "referenceTime": 0.4,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-006-left-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-006-left-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-006-left-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-006-left-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-006-left-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            }
+          ],
+          "scene": "assets/cases/pointgoal-long1018/step-006-front-rgb.png",
+          "semantic": "assets/cases/pointgoal-long1018/step-006-front-semantic.png",
+          "semanticAvailable": true,
+          "latentSemantic": "assets/cases/pointgoal-long1018/step-006-front-latent-semantic.png",
+          "depth": "assets/cases/pointgoal-long1018/step-006-front-depth.png",
+          "latentDepth": "assets/cases/pointgoal-long1018/step-006-front-latent-depth.png",
+          "box": null,
+          "latentBox": null,
+          "boxEmbedded": false,
+          "voxels": "assets/native-occ/pointgoal-long1018/frame-1/readout-voxels.bin",
+          "latentVoxels": "assets/native-occ/pointgoal-long1018/frame-1/latent-voxels.bin",
+          "latentFallback": {
+            "orbit": "assets/native-occ/pointgoal-long1018/frame-1/latent-orbit.png",
+            "top": "assets/native-occ/pointgoal-long1018/frame-1/latent-top.png",
+            "side": "assets/native-occ/pointgoal-long1018/frame-1/latent-side.png"
+          },
+          "occupancyAnchor": [
+            0.39886884357972924,
+            0.015846516464975452,
+            0.21048521995544434
+          ],
+          "occupancyCoordinateFrame": "per-frame-body",
+          "fallback": {
+            "orbit": "assets/native-occ/pointgoal-long1018/frame-1/readout-orbit.png",
+            "top": "assets/native-occ/pointgoal-long1018/frame-1/readout-top.png",
+            "side": "assets/native-occ/pointgoal-long1018/frame-1/readout-side.png"
+          },
+          "readoutKind": "recording-derived-illustration",
+          "depthProvenance": "Raycast of the same-step supplied occupancy using recorded intrinsics; assumed camera height0.8m, zero mount offset and pitch, four cardinal yaw offsets. Ground plane assumed atz0. No source depth GT. CLS/latent displays use16/12-cell low-pass respectively.",
+          "sourceRgbSha256": "f29e35bb2c582ea461b991611fbe11e7bcd2b1f9eb0ac156d3d303a01043ab7e",
+          "voxelSha256": "edd252d1a9e0f2b7fccd2753a42c112303a88d6e5453902095f687f1f2c2078e",
+          "latentVoxelSha256": "c176b10a81d7f7a7fd99b8f10c4322172970dc2abec09bd63e9913cd98d5635f"
+        },
+        {
+          "time": 0.8,
+          "referenceTime": 0.8,
+          "sourceTime": 1.4,
+          "sourceStep": 8,
+          "sourceFrameIndex": 7,
+          "rgbSize": [
+            406,
+            406
+          ],
+          "temporalAvailable": true,
+          "robotPose": [
+            -1.5743813514709473,
+            -6.159162998199463,
+            1.210540916424982
+          ],
+          "history": [
+            {
+              "time": 0.2,
+              "sourceStep": 5,
+              "robotPose": [
+                -1.901283621788025,
+                -6.661091327667236,
+                0.9132046864046052
+              ]
+            },
+            {
+              "time": 0.4,
+              "sourceStep": 6,
+              "robotPose": [
+                -1.7790411710739136,
+                -6.502798080444336,
+                1.0200786621085887
+              ]
+            },
+            {
+              "time": 0.6,
+              "sourceStep": 7,
+              "robotPose": [
+                -1.6743813753128052,
+                -6.332367897033691,
+                1.1206703012606996
+              ]
+            },
+            {
+              "time": 0.8,
+              "sourceStep": 8,
+              "robotPose": [
+                -1.5743813514709473,
+                -6.159162998199463,
+                1.210540916424982
+              ]
+            }
+          ],
+          "motionTimes": [
+            0.2,
+            0.4,
+            0.6,
+            0.8
+          ],
+          "pointGoal": [
+            8.0359436,
+            2.9476119
+          ],
+          "pointGoalWorld": [
+            -1.5,
+            2.4000000953674316
+          ],
+          "motionCoordinateFrame": "per-frame-body",
+          "egoMotion": [
+            [
+              -0.5849453,
+              0.128981
+            ],
+            [
+              -0.3937214,
+              0.0703861
+            ],
+            [
+              -0.1973377,
+              0.0325237
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "targetMotion": null,
+          "egoMotionAvailable": true,
+          "targetMotionAvailable": false,
+          "views": [
+            {
+              "key": "front",
+              "label": "Front",
+              "url": "assets/cases/pointgoal-long1018/step-008-front-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "d4124d98d580f4bc5156ab6c7f338f45f85a990d399f61dd6dfd16f17421d2b8",
+              "referenceTime": 0.8,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-008-front-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-008-front-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-008-front-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-008-front-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-008-front-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            },
+            {
+              "key": "right",
+              "label": "Right",
+              "url": "assets/cases/pointgoal-long1018/step-008-right-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "498f5e31bb5b09b056a7122a35118ae7e37c1759b8f01b5fba180081fc5e28ff",
+              "referenceTime": 0.8,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-008-right-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-008-right-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-008-right-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-008-right-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-008-right-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            },
+            {
+              "key": "back",
+              "label": "Back",
+              "url": "assets/cases/pointgoal-long1018/step-008-back-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "6b5e1ecd03048a56e8e89c0ce741a7722924820f25b0613b8fe9313b0618c78c",
+              "referenceTime": 0.8,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-008-back-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-008-back-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-008-back-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-008-back-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-008-back-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            },
+            {
+              "key": "left",
+              "label": "Left",
+              "url": "assets/cases/pointgoal-long1018/step-008-left-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "b529b248cb287f4a2ea90f5ae97e3c08b5f440eea018c27368026348d9a2363d",
+              "referenceTime": 0.8,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-008-left-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-008-left-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-008-left-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-008-left-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-008-left-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            }
+          ],
+          "scene": "assets/cases/pointgoal-long1018/step-008-front-rgb.png",
+          "semantic": "assets/cases/pointgoal-long1018/step-008-front-semantic.png",
+          "semanticAvailable": true,
+          "latentSemantic": "assets/cases/pointgoal-long1018/step-008-front-latent-semantic.png",
+          "depth": "assets/cases/pointgoal-long1018/step-008-front-depth.png",
+          "latentDepth": "assets/cases/pointgoal-long1018/step-008-front-latent-depth.png",
+          "box": null,
+          "latentBox": null,
+          "boxEmbedded": false,
+          "voxels": "assets/native-occ/pointgoal-long1018/frame-2/readout-voxels.bin",
+          "latentVoxels": "assets/native-occ/pointgoal-long1018/frame-2/latent-voxels.bin",
+          "latentFallback": {
+            "orbit": "assets/native-occ/pointgoal-long1018/frame-2/latent-orbit.png",
+            "top": "assets/native-occ/pointgoal-long1018/frame-2/latent-top.png",
+            "side": "assets/native-occ/pointgoal-long1018/frame-2/latent-side.png"
+          },
+          "occupancyAnchor": [
+            0.7888358556655524,
+            0.10470843741098518,
+            0.4009474515914917
+          ],
+          "occupancyCoordinateFrame": "per-frame-body",
+          "fallback": {
+            "orbit": "assets/native-occ/pointgoal-long1018/frame-2/readout-orbit.png",
+            "top": "assets/native-occ/pointgoal-long1018/frame-2/readout-top.png",
+            "side": "assets/native-occ/pointgoal-long1018/frame-2/readout-side.png"
+          },
+          "readoutKind": "recording-derived-illustration",
+          "depthProvenance": "Raycast of the same-step supplied occupancy using recorded intrinsics; assumed camera height0.8m, zero mount offset and pitch, four cardinal yaw offsets. Ground plane assumed atz0. No source depth GT. CLS/latent displays use16/12-cell low-pass respectively.",
+          "sourceRgbSha256": "d4124d98d580f4bc5156ab6c7f338f45f85a990d399f61dd6dfd16f17421d2b8",
+          "voxelSha256": "f74d051ba682adb6365b9b18046373811befbb5e5c5b798c69ffdf6deeaf7445",
+          "latentVoxelSha256": "9869f38bf249d7f406277b2bfe5aa8b8b6a700c32e1ec9fb437405edc6a26e7e"
+        },
+        {
+          "time": 1.2,
+          "referenceTime": 1.2,
+          "sourceTime": 1.8,
+          "sourceStep": 10,
+          "sourceFrameIndex": 9,
+          "rgbSize": [
+            406,
+            406
+          ],
+          "temporalAvailable": true,
+          "robotPose": [
+            -1.4543455839157104,
+            -5.778232574462891,
+            1.3936894328738678
+          ],
+          "history": [
+            {
+              "time": 0.6,
+              "sourceStep": 7,
+              "robotPose": [
+                -1.6743813753128052,
+                -6.332367897033691,
+                1.1206703012606996
+              ]
+            },
+            {
+              "time": 0.8,
+              "sourceStep": 8,
+              "robotPose": [
+                -1.5743813514709473,
+                -6.159162998199463,
+                1.210540916424982
+              ]
+            },
+            {
+              "time": 1.0,
+              "sourceStep": 9,
+              "robotPose": [
+                -1.5038787126541138,
+                -5.972001552581787,
+                1.3205262757580063
+              ]
+            },
+            {
+              "time": 1.2,
+              "sourceStep": 10,
+              "robotPose": [
+                -1.4543455839157104,
+                -5.778232574462891,
+                1.3936894328738678
+              ]
+            }
+          ],
+          "motionTimes": [
+            0.6,
+            0.8,
+            1.0,
+            1.2
+          ],
+          "pointGoal": [
+            8.0422614,
+            1.4858015
+          ],
+          "pointGoalWorld": [
+            -1.5,
+            2.4000000953674316
+          ],
+          "motionCoordinateFrame": "per-frame-body",
+          "egoMotion": [
+            [
+              -0.5842337,
+              0.118965
+            ],
+            [
+              -0.3961199,
+              0.0510449
+            ],
+            [
+              -0.1994648,
+              0.0146196
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "targetMotion": null,
+          "egoMotionAvailable": true,
+          "targetMotionAvailable": false,
+          "views": [
+            {
+              "key": "front",
+              "label": "Front",
+              "url": "assets/cases/pointgoal-long1018/step-010-front-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "74eb41d77768ccdc6c4bdd8619922b53edb033f7cf704e3700165cd80cb6e80b",
+              "referenceTime": 1.2,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-010-front-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-010-front-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-010-front-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-010-front-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-010-front-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            },
+            {
+              "key": "right",
+              "label": "Right",
+              "url": "assets/cases/pointgoal-long1018/step-010-right-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "7b5dbc5b2e89e2a13b8fcf4623683c5e944bb9288bc6af8a7424089f4c577081",
+              "referenceTime": 1.2,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-010-right-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-010-right-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-010-right-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-010-right-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-010-right-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            },
+            {
+              "key": "back",
+              "label": "Back",
+              "url": "assets/cases/pointgoal-long1018/step-010-back-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "21bc6a1a2fff968cc87c301072091c05bc949b73ae584f311608ce47ea9e5b87",
+              "referenceTime": 1.2,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-010-back-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-010-back-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-010-back-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-010-back-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-010-back-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            },
+            {
+              "key": "left",
+              "label": "Left",
+              "url": "assets/cases/pointgoal-long1018/step-010-left-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "4dc931c64c017e577776268e1d4d066d4b26d5c8d149809ead727a66a1201932",
+              "referenceTime": 1.2,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-010-left-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-010-left-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-010-left-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-010-left-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-010-left-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            }
+          ],
+          "scene": "assets/cases/pointgoal-long1018/step-010-front-rgb.png",
+          "semantic": "assets/cases/pointgoal-long1018/step-010-front-semantic.png",
+          "semanticAvailable": true,
+          "latentSemantic": "assets/cases/pointgoal-long1018/step-010-front-latent-semantic.png",
+          "depth": "assets/cases/pointgoal-long1018/step-010-front-depth.png",
+          "latentDepth": "assets/cases/pointgoal-long1018/step-010-front-latent-depth.png",
+          "box": null,
+          "latentBox": null,
+          "boxEmbedded": false,
+          "voxels": "assets/native-occ/pointgoal-long1018/frame-3/readout-voxels.bin",
+          "latentVoxels": "assets/native-occ/pointgoal-long1018/frame-3/latent-voxels.bin",
+          "latentFallback": {
+            "orbit": "assets/native-occ/pointgoal-long1018/frame-3/latent-orbit.png",
+            "top": "assets/native-occ/pointgoal-long1018/frame-3/latent-top.png",
+            "side": "assets/native-occ/pointgoal-long1018/frame-3/latent-side.png"
+          },
+          "occupancyAnchor": [
+            1.1474318828480254,
+            0.2805648063876197,
+            0.5840959548950195
+          ],
+          "occupancyCoordinateFrame": "per-frame-body",
+          "fallback": {
+            "orbit": "assets/native-occ/pointgoal-long1018/frame-3/readout-orbit.png",
+            "top": "assets/native-occ/pointgoal-long1018/frame-3/readout-top.png",
+            "side": "assets/native-occ/pointgoal-long1018/frame-3/readout-side.png"
+          },
+          "readoutKind": "recording-derived-illustration",
+          "depthProvenance": "Raycast of the same-step supplied occupancy using recorded intrinsics; assumed camera height0.8m, zero mount offset and pitch, four cardinal yaw offsets. Ground plane assumed atz0. No source depth GT. CLS/latent displays use16/12-cell low-pass respectively.",
+          "sourceRgbSha256": "74eb41d77768ccdc6c4bdd8619922b53edb033f7cf704e3700165cd80cb6e80b",
+          "voxelSha256": "30c64eaa9339139f04a45403b46eb5eaa5eb5473848edf9d728b0bb67204daa6",
+          "latentVoxelSha256": "96fa6ad399cbe53530e49bbf3dd09991eb9fe90460ad5331f33c18a513cf2424"
+        },
+        {
+          "time": 1.6,
+          "referenceTime": 1.6,
+          "sourceTime": 2.2,
+          "sourceStep": 12,
+          "sourceFrameIndex": 11,
+          "rgbSize": [
+            406,
+            406
+          ],
+          "temporalAvailable": true,
+          "robotPose": [
+            -1.3946936130523682,
+            -5.382856845855713,
+            1.4842514646365306
+          ],
+          "history": [
+            {
+              "time": 1.0,
+              "sourceStep": 9,
+              "robotPose": [
+                -1.5038787126541138,
+                -5.972001552581787,
+                1.3205262757580063
+              ]
+            },
+            {
+              "time": 1.2,
+              "sourceStep": 10,
+              "robotPose": [
+                -1.4543455839157104,
+                -5.778232574462891,
+                1.3936894328738678
+              ]
+            },
+            {
+              "time": 1.4,
+              "sourceStep": 11,
+              "robotPose": [
+                -1.4191091060638428,
+                -5.581361293792725,
+                1.448413720373047
+              ]
+            },
+            {
+              "time": 1.6,
+              "sourceStep": 12,
+              "robotPose": [
+                -1.3946936130523682,
+                -5.382856845855713,
+                1.4842514646365306
+              ]
+            }
+          ],
+          "motionTimes": [
+            1.0,
+            1.2,
+            1.4,
+            1.6
+          ],
+          "pointGoal": [
+            7.7446259,
+            0.777638
+          ],
+          "pointGoalWorld": [
+            -1.5,
+            2.4000000953674316
+          ],
+          "motionCoordinateFrame": "per-frame-body",
+          "egoMotion": [
+            [
+              -0.5963774,
+              0.0578526
+            ],
+            [
+              -0.3990521,
+              0.0252537
+            ],
+            [
+              -0.1998719,
+              0.007166
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "targetMotion": null,
+          "egoMotionAvailable": true,
+          "targetMotionAvailable": false,
+          "views": [
+            {
+              "key": "front",
+              "label": "Front",
+              "url": "assets/cases/pointgoal-long1018/step-012-front-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "878b983f27d670c43e2a03901b24d7124ae01f57306e613060a6b7ee79d5a002",
+              "referenceTime": 1.6,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-012-front-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-012-front-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-012-front-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-012-front-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-012-front-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            },
+            {
+              "key": "right",
+              "label": "Right",
+              "url": "assets/cases/pointgoal-long1018/step-012-right-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "0ce04232b56b36a2c8843075d3936725f3b50d1b94e12886b7c5ddded10e716f",
+              "referenceTime": 1.6,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-012-right-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-012-right-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-012-right-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-012-right-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-012-right-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            },
+            {
+              "key": "back",
+              "label": "Back",
+              "url": "assets/cases/pointgoal-long1018/step-012-back-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "67cf5c90c389f0e06a2de3a422ba76538ee4d135fb1f91d877b20fd662f04473",
+              "referenceTime": 1.6,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-012-back-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-012-back-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-012-back-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-012-back-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-012-back-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            },
+            {
+              "key": "left",
+              "label": "Left",
+              "url": "assets/cases/pointgoal-long1018/step-012-left-rgb.png",
+              "rgbSize": [
+                406,
+                406
+              ],
+              "intrinsics": [
+                [
+                  121.43688201904297,
+                  0.0,
+                  203.0
+                ],
+                [
+                  0.0,
+                  121.43688201904297,
+                  203.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "sourcePixelSha256": "0541733844b081e9c3b6034bb67a550a40daf9a85d9d7acfd7a02e7c5a16f65c",
+              "referenceTime": 1.6,
+              "box": null,
+              "latentBox": null,
+              "semantic": "assets/cases/pointgoal-long1018/step-012-left-semantic.png",
+              "latentSemantic": "assets/cases/pointgoal-long1018/step-012-left-latent-semantic.png",
+              "semanticAvailable": true,
+              "depth": "assets/cases/pointgoal-long1018/step-012-left-depth.png",
+              "latentDepth": "assets/cases/pointgoal-long1018/step-012-left-latent-depth.png",
+              "depthMetres": "assets/cases/pointgoal-long1018/step-012-left-depth-approx-metres.npy",
+              "depthKind": "occupancy-projected-approximation"
+            }
+          ],
+          "scene": "assets/cases/pointgoal-long1018/step-012-front-rgb.png",
+          "semantic": "assets/cases/pointgoal-long1018/step-012-front-semantic.png",
+          "semanticAvailable": true,
+          "latentSemantic": "assets/cases/pointgoal-long1018/step-012-front-latent-semantic.png",
+          "depth": "assets/cases/pointgoal-long1018/step-012-front-depth.png",
+          "latentDepth": "assets/cases/pointgoal-long1018/step-012-front-latent-depth.png",
+          "box": null,
+          "latentBox": null,
+          "boxEmbedded": false,
+          "voxels": "assets/native-occ/pointgoal-long1018/frame-4/readout-voxels.bin",
+          "latentVoxels": "assets/native-occ/pointgoal-long1018/frame-4/latent-voxels.bin",
+          "latentFallback": {
+            "orbit": "assets/native-occ/pointgoal-long1018/frame-4/latent-orbit.png",
+            "top": "assets/native-occ/pointgoal-long1018/frame-4/latent-top.png",
+            "side": "assets/native-occ/pointgoal-long1018/frame-4/latent-side.png"
+          },
+          "occupancyAnchor": [
+            1.4748340980815398,
+            0.5101037221725585,
+            0.6746580600738525
+          ],
+          "occupancyCoordinateFrame": "per-frame-body",
+          "fallback": {
+            "orbit": "assets/native-occ/pointgoal-long1018/frame-4/readout-orbit.png",
+            "top": "assets/native-occ/pointgoal-long1018/frame-4/readout-top.png",
+            "side": "assets/native-occ/pointgoal-long1018/frame-4/readout-side.png"
+          },
+          "readoutKind": "recording-derived-illustration",
+          "depthProvenance": "Raycast of the same-step supplied occupancy using recorded intrinsics; assumed camera height0.8m, zero mount offset and pitch, four cardinal yaw offsets. Ground plane assumed atz0. No source depth GT. CLS/latent displays use16/12-cell low-pass respectively.",
+          "sourceRgbSha256": "878b983f27d670c43e2a03901b24d7124ae01f57306e613060a6b7ee79d5a002",
+          "voxelSha256": "7ef55325e6400489a88c157f45ec6e3b17a6d4d9cadf2f07b59223f0936e3756",
+          "latentVoxelSha256": "5577ad26f9096881b943dd925e5b8e1a9ba8a2227941317223e8c3b23e3b3645"
+        }
+      ],
+      "input": "assets/cases/pointgoal-long1018/step-004-front-rgb.png",
+      "views": [
+        {
+          "key": "front",
+          "label": "Front",
+          "url": "assets/cases/pointgoal-long1018/step-004-front-rgb.png",
+          "rgbSize": [
+            406,
+            406
+          ],
+          "intrinsics": [
+            [
+              121.43688201904297,
+              0.0,
+              203.0
+            ],
+            [
+              0.0,
+              121.43688201904297,
+              203.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "sourcePixelSha256": "de0c1d06c8be473f3332fb5e9c23aea3be669ed13614ead55c10130ee9b91bce",
+          "referenceTime": 0.0,
+          "box": null,
+          "latentBox": null,
+          "semantic": "assets/cases/pointgoal-long1018/step-004-front-semantic.png",
+          "latentSemantic": "assets/cases/pointgoal-long1018/step-004-front-latent-semantic.png",
+          "semanticAvailable": true,
+          "depth": "assets/cases/pointgoal-long1018/step-004-front-depth.png",
+          "latentDepth": "assets/cases/pointgoal-long1018/step-004-front-latent-depth.png",
+          "depthMetres": "assets/cases/pointgoal-long1018/step-004-front-depth-approx-metres.npy",
+          "depthKind": "occupancy-projected-approximation"
+        },
+        {
+          "key": "right",
+          "label": "Right",
+          "url": "assets/cases/pointgoal-long1018/step-004-right-rgb.png",
+          "rgbSize": [
+            406,
+            406
+          ],
+          "intrinsics": [
+            [
+              121.43688201904297,
+              0.0,
+              203.0
+            ],
+            [
+              0.0,
+              121.43688201904297,
+              203.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "sourcePixelSha256": "34f9abe4d5c2a4c15b98e5dd7cf7584cb3e5206c9e67ba64f82d95d1bd840d59",
+          "referenceTime": 0.0,
+          "box": null,
+          "latentBox": null,
+          "semantic": "assets/cases/pointgoal-long1018/step-004-right-semantic.png",
+          "latentSemantic": "assets/cases/pointgoal-long1018/step-004-right-latent-semantic.png",
+          "semanticAvailable": true,
+          "depth": "assets/cases/pointgoal-long1018/step-004-right-depth.png",
+          "latentDepth": "assets/cases/pointgoal-long1018/step-004-right-latent-depth.png",
+          "depthMetres": "assets/cases/pointgoal-long1018/step-004-right-depth-approx-metres.npy",
+          "depthKind": "occupancy-projected-approximation"
+        },
+        {
+          "key": "back",
+          "label": "Back",
+          "url": "assets/cases/pointgoal-long1018/step-004-back-rgb.png",
+          "rgbSize": [
+            406,
+            406
+          ],
+          "intrinsics": [
+            [
+              121.43688201904297,
+              0.0,
+              203.0
+            ],
+            [
+              0.0,
+              121.43688201904297,
+              203.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "sourcePixelSha256": "521b46fe6c9adcbdfb2972f17dd271ce7066b58e444665f6ce9c7331e9d3c087",
+          "referenceTime": 0.0,
+          "box": null,
+          "latentBox": null,
+          "semantic": "assets/cases/pointgoal-long1018/step-004-back-semantic.png",
+          "latentSemantic": "assets/cases/pointgoal-long1018/step-004-back-latent-semantic.png",
+          "semanticAvailable": true,
+          "depth": "assets/cases/pointgoal-long1018/step-004-back-depth.png",
+          "latentDepth": "assets/cases/pointgoal-long1018/step-004-back-latent-depth.png",
+          "depthMetres": "assets/cases/pointgoal-long1018/step-004-back-depth-approx-metres.npy",
+          "depthKind": "occupancy-projected-approximation"
+        },
+        {
+          "key": "left",
+          "label": "Left",
+          "url": "assets/cases/pointgoal-long1018/step-004-left-rgb.png",
+          "rgbSize": [
+            406,
+            406
+          ],
+          "intrinsics": [
+            [
+              121.43688201904297,
+              0.0,
+              203.0
+            ],
+            [
+              0.0,
+              121.43688201904297,
+              203.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "sourcePixelSha256": "ee177566a58639829fb4b38cff06bef388f08634c7959f45b3e65245d48d82f1",
+          "referenceTime": 0.0,
+          "box": null,
+          "latentBox": null,
+          "semantic": "assets/cases/pointgoal-long1018/step-004-left-semantic.png",
+          "latentSemantic": "assets/cases/pointgoal-long1018/step-004-left-latent-semantic.png",
+          "semanticAvailable": true,
+          "depth": "assets/cases/pointgoal-long1018/step-004-left-depth.png",
+          "latentDepth": "assets/cases/pointgoal-long1018/step-004-left-latent-depth.png",
+          "depthMetres": "assets/cases/pointgoal-long1018/step-004-left-depth-approx-metres.npy",
+          "depthKind": "occupancy-projected-approximation"
+        }
+      ],
+      "pointGoal": [
+        7.0370357,
+        5.9549054
+      ]
+    },
+    {
+      "id": "track",
+      "title": "Follow the person in red",
+      "task": "Track",
+      "prompt": "Follow the person wearing a red shirt.",
+      "description": "Four synchronized views from the supplied tracking recording.",
+      "inputKind": "recorded-four-view-rgb",
+      "selectedCamera": "view-1",
+      "hasTarget": true,
+      "rgbSize": [
+        640,
+        480
+      ],
+      "timeBasis": "video-frame",
+      "availableModalities": [
+        "semantic",
+        "box"
+      ],
+      "egoMotionAvailable": false,
+      "targetMotionAvailable": false,
+      "depthAvailable": false,
+      "occupancyAvailable": false,
+      "source": {
+        "type": "user-four-view-track-video",
+        "sourceSha256": "183ce74cd5511175e38732cb776dcf3aed73005186815a4288ed05ed0cc233e2",
+        "duration": 169.0,
+        "encodedFrameRate": "1/1",
+        "simulationStepSeconds": null,
+        "cameraOrderVerified": false,
+        "sourceLayout": [
+          2560,
+          480
+        ],
+        "perViewSize": [
+          640,
+          480
+        ],
+        "inputAnnotations": false,
+        "targetDescription": "The person wearing a red shirt.",
+        "video": "assets/cases/track-source/four-view-tracking.mp4",
+        "poster": "assets/cases/track-source/four-view-poster.jpg",
+        "frames": [
+          {
+            "frameIndex": 0,
+            "videoTime": 0,
+            "views": [
+              {
+                "key": "view-1",
+                "label": "View 1",
+                "url": "assets/cases/track-source/frame-0-view-1.png",
+                "sourceCrop": [
+                  0,
+                  0,
+                  640,
+                  480
+                ]
+              },
+              {
+                "key": "view-2",
+                "label": "View 2",
+                "url": "assets/cases/track-source/frame-0-view-2.png",
+                "sourceCrop": [
+                  640,
+                  0,
+                  640,
+                  480
+                ]
+              },
+              {
+                "key": "view-3",
+                "label": "View 3",
+                "url": "assets/cases/track-source/frame-0-view-3.png",
+                "sourceCrop": [
+                  1280,
+                  0,
+                  640,
+                  480
+                ]
+              },
+              {
+                "key": "view-4",
+                "label": "View 4",
+                "url": "assets/cases/track-source/frame-0-view-4.png",
+                "sourceCrop": [
+                  1920,
+                  0,
+                  640,
+                  480
+                ]
+              }
+            ]
+          },
+          {
+            "frameIndex": 1,
+            "videoTime": 1,
+            "views": [
+              {
+                "key": "view-1",
+                "label": "View 1",
+                "url": "assets/cases/track-source/frame-1-view-1.png",
+                "sourceCrop": [
+                  0,
+                  0,
+                  640,
+                  480
+                ]
+              },
+              {
+                "key": "view-2",
+                "label": "View 2",
+                "url": "assets/cases/track-source/frame-1-view-2.png",
+                "sourceCrop": [
+                  640,
+                  0,
+                  640,
+                  480
+                ]
+              },
+              {
+                "key": "view-3",
+                "label": "View 3",
+                "url": "assets/cases/track-source/frame-1-view-3.png",
+                "sourceCrop": [
+                  1280,
+                  0,
+                  640,
+                  480
+                ]
+              },
+              {
+                "key": "view-4",
+                "label": "View 4",
+                "url": "assets/cases/track-source/frame-1-view-4.png",
+                "sourceCrop": [
+                  1920,
+                  0,
+                  640,
+                  480
+                ]
+              }
+            ]
+          },
+          {
+            "frameIndex": 2,
+            "videoTime": 2,
+            "views": [
+              {
+                "key": "view-1",
+                "label": "View 1",
+                "url": "assets/cases/track-source/frame-2-view-1.png",
+                "sourceCrop": [
+                  0,
+                  0,
+                  640,
+                  480
+                ]
+              },
+              {
+                "key": "view-2",
+                "label": "View 2",
+                "url": "assets/cases/track-source/frame-2-view-2.png",
+                "sourceCrop": [
+                  640,
+                  0,
+                  640,
+                  480
+                ]
+              },
+              {
+                "key": "view-3",
+                "label": "View 3",
+                "url": "assets/cases/track-source/frame-2-view-3.png",
+                "sourceCrop": [
+                  1280,
+                  0,
+                  640,
+                  480
+                ]
+              },
+              {
+                "key": "view-4",
+                "label": "View 4",
+                "url": "assets/cases/track-source/frame-2-view-4.png",
+                "sourceCrop": [
+                  1920,
+                  0,
+                  640,
+                  480
+                ]
+              }
+            ]
+          },
+          {
+            "frameIndex": 3,
+            "videoTime": 3,
+            "views": [
+              {
+                "key": "view-1",
+                "label": "View 1",
+                "url": "assets/cases/track-source/frame-3-view-1.png",
+                "sourceCrop": [
+                  0,
+                  0,
+                  640,
+                  480
+                ]
+              },
+              {
+                "key": "view-2",
+                "label": "View 2",
+                "url": "assets/cases/track-source/frame-3-view-2.png",
+                "sourceCrop": [
+                  640,
+                  0,
+                  640,
+                  480
+                ]
+              },
+              {
+                "key": "view-3",
+                "label": "View 3",
+                "url": "assets/cases/track-source/frame-3-view-3.png",
+                "sourceCrop": [
+                  1280,
+                  0,
+                  640,
+                  480
+                ]
+              },
+              {
+                "key": "view-4",
+                "label": "View 4",
+                "url": "assets/cases/track-source/frame-3-view-4.png",
+                "sourceCrop": [
+                  1920,
+                  0,
+                  640,
+                  480
+                ]
+              }
+            ]
+          },
+          {
+            "frameIndex": 4,
+            "videoTime": 4,
+            "views": [
+              {
+                "key": "view-1",
+                "label": "View 1",
+                "url": "assets/cases/track-source/frame-4-view-1.png",
+                "sourceCrop": [
+                  0,
+                  0,
+                  640,
+                  480
+                ]
+              },
+              {
+                "key": "view-2",
+                "label": "View 2",
+                "url": "assets/cases/track-source/frame-4-view-2.png",
+                "sourceCrop": [
+                  640,
+                  0,
+                  640,
+                  480
+                ]
+              },
+              {
+                "key": "view-3",
+                "label": "View 3",
+                "url": "assets/cases/track-source/frame-4-view-3.png",
+                "sourceCrop": [
+                  1280,
+                  0,
+                  640,
+                  480
+                ]
+              },
+              {
+                "key": "view-4",
+                "label": "View 4",
+                "url": "assets/cases/track-source/frame-4-view-4.png",
+                "sourceCrop": [
+                  1920,
+                  0,
+                  640,
+                  480
+                ]
+              }
+            ]
+          }
+        ],
+        "geometryStatus": "No paired scene geometry, metric depth, or camera poses supplied with this clip.",
+        "semanticIllustrationProvenance": "data/track-generated-semantic-import.json"
+      },
+      "provenance": "Unannotated RGB extracted from the user-supplied four-view clip. Frames are video-frame indices; physical simulation step duration and camera headings are unknown. Target boxes are manually reviewed display overlays; semantic and latent readouts are illustrations. No paired metric depth, occupancy, or robot/target poses are supplied.",
+      "viewAvailability": {
+        "available": 4,
+        "required": 4,
+        "synchronized": true
+      },
+      "input": "assets/cases/track-source/frame-0-view-1.png",
+      "views": [
+        {
+          "key": "view-1",
+          "label": "View 1",
+          "url": "assets/cases/track-source/frame-0-view-1.png",
+          "sourceCrop": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "rgbSize": [
+            640,
+            480
+          ],
+          "referenceTime": 0,
+          "sourceFrameIndex": 0,
+          "sourcePixelSha256": "059626178a2a6494aff7b85350f45725d41ef0fed30ad877f1cca116b12e5e5e",
+          "semantic": "assets/cases/track-source/frame-0-view-1-semantic.png",
+          "latentSemantic": "assets/cases/track-source/frame-0-view-1-latent-semantic.png",
+          "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+          "box": [
+            0.115625,
+            0.12083333333333333,
+            0.3421875,
+            0.9083333333333333
+          ],
+          "latentBox": [
+            0.109375,
+            0.11458333333333333,
+            0.35,
+            0.9166666666666666
+          ],
+          "boxSourcePixels": [
+            74,
+            58,
+            219,
+            436
+          ],
+          "boxEmbedded": false,
+          "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+          "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+          "targetVisibility": "full",
+          "targetTruncated": false
+        },
+        {
+          "key": "view-2",
+          "label": "View 2",
+          "url": "assets/cases/track-source/frame-0-view-2.png",
+          "sourceCrop": [
+            640,
+            0,
+            640,
+            480
+          ],
+          "rgbSize": [
+            640,
+            480
+          ],
+          "referenceTime": 0,
+          "sourceFrameIndex": 0,
+          "sourcePixelSha256": "703ff5532d2026c96a8f7f5557f9d4ba0019b56a2c5a1fc0ff3ba36e76a4dfad",
+          "semantic": "assets/cases/track-source/frame-0-view-2-semantic.png",
+          "latentSemantic": "assets/cases/track-source/frame-0-view-2-latent-semantic.png",
+          "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+          "box": null,
+          "latentBox": null,
+          "boxSourcePixels": null,
+          "boxEmbedded": false,
+          "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+          "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+          "targetVisibility": "absent",
+          "targetTruncated": false
+        },
+        {
+          "key": "view-3",
+          "label": "View 3",
+          "url": "assets/cases/track-source/frame-0-view-3.png",
+          "sourceCrop": [
+            1280,
+            0,
+            640,
+            480
+          ],
+          "rgbSize": [
+            640,
+            480
+          ],
+          "referenceTime": 0,
+          "sourceFrameIndex": 0,
+          "sourcePixelSha256": "ebbe1b8ea56e7f67183445e4955e59f19b073bad51a72fe95489c69f0d1a043d",
+          "semantic": "assets/cases/track-source/frame-0-view-3-semantic.png",
+          "latentSemantic": "assets/cases/track-source/frame-0-view-3-latent-semantic.png",
+          "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+          "box": null,
+          "latentBox": null,
+          "boxSourcePixels": null,
+          "boxEmbedded": false,
+          "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+          "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+          "targetVisibility": "absent",
+          "targetTruncated": false
+        },
+        {
+          "key": "view-4",
+          "label": "View 4",
+          "url": "assets/cases/track-source/frame-0-view-4.png",
+          "sourceCrop": [
+            1920,
+            0,
+            640,
+            480
+          ],
+          "rgbSize": [
+            640,
+            480
+          ],
+          "referenceTime": 0,
+          "sourceFrameIndex": 0,
+          "sourcePixelSha256": "7be8abb835287b58eec6e9e8e3ddd818fcc26b082296791416f6888560deab15",
+          "semantic": "assets/cases/track-source/frame-0-view-4-semantic.png",
+          "latentSemantic": "assets/cases/track-source/frame-0-view-4-latent-semantic.png",
+          "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+          "box": [
+            0.9328125,
+            0.175,
+            1.0,
+            0.7895833333333333
+          ],
+          "latentBox": [
+            0.9265625,
+            0.16875,
+            1.0,
+            0.7979166666666667
+          ],
+          "boxSourcePixels": [
+            597,
+            84,
+            640,
+            379
+          ],
+          "boxEmbedded": false,
+          "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+          "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+          "targetVisibility": "partial",
+          "targetTruncated": true
+        }
+      ],
+      "video": "assets/cases/track-source/four-view-tracking.mp4",
+      "poster": "assets/cases/track-source/four-view-poster.jpg",
+      "frames": [
+        {
+          "frameIndex": 0,
+          "videoTime": 0,
+          "views": [
+            {
+              "key": "view-1",
+              "label": "View 1",
+              "url": "assets/cases/track-source/frame-0-view-1.png",
+              "sourceCrop": [
+                0,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 0,
+              "sourceFrameIndex": 0,
+              "sourcePixelSha256": "059626178a2a6494aff7b85350f45725d41ef0fed30ad877f1cca116b12e5e5e",
+              "semantic": "assets/cases/track-source/frame-0-view-1-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-0-view-1-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": [
+                0.115625,
+                0.12083333333333333,
+                0.3421875,
+                0.9083333333333333
+              ],
+              "latentBox": [
+                0.109375,
+                0.11458333333333333,
+                0.35,
+                0.9166666666666666
+              ],
+              "boxSourcePixels": [
+                74,
+                58,
+                219,
+                436
+              ],
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "full",
+              "targetTruncated": false
+            },
+            {
+              "key": "view-2",
+              "label": "View 2",
+              "url": "assets/cases/track-source/frame-0-view-2.png",
+              "sourceCrop": [
+                640,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 0,
+              "sourceFrameIndex": 0,
+              "sourcePixelSha256": "703ff5532d2026c96a8f7f5557f9d4ba0019b56a2c5a1fc0ff3ba36e76a4dfad",
+              "semantic": "assets/cases/track-source/frame-0-view-2-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-0-view-2-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": null,
+              "latentBox": null,
+              "boxSourcePixels": null,
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "absent",
+              "targetTruncated": false
+            },
+            {
+              "key": "view-3",
+              "label": "View 3",
+              "url": "assets/cases/track-source/frame-0-view-3.png",
+              "sourceCrop": [
+                1280,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 0,
+              "sourceFrameIndex": 0,
+              "sourcePixelSha256": "ebbe1b8ea56e7f67183445e4955e59f19b073bad51a72fe95489c69f0d1a043d",
+              "semantic": "assets/cases/track-source/frame-0-view-3-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-0-view-3-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": null,
+              "latentBox": null,
+              "boxSourcePixels": null,
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "absent",
+              "targetTruncated": false
+            },
+            {
+              "key": "view-4",
+              "label": "View 4",
+              "url": "assets/cases/track-source/frame-0-view-4.png",
+              "sourceCrop": [
+                1920,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 0,
+              "sourceFrameIndex": 0,
+              "sourcePixelSha256": "7be8abb835287b58eec6e9e8e3ddd818fcc26b082296791416f6888560deab15",
+              "semantic": "assets/cases/track-source/frame-0-view-4-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-0-view-4-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": [
+                0.9328125,
+                0.175,
+                1.0,
+                0.7895833333333333
+              ],
+              "latentBox": [
+                0.9265625,
+                0.16875,
+                1.0,
+                0.7979166666666667
+              ],
+              "boxSourcePixels": [
+                597,
+                84,
+                640,
+                379
+              ],
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "partial",
+              "targetTruncated": true
+            }
+          ],
+          "time": 0,
+          "referenceTime": 0,
+          "timeBasis": "video-frame",
+          "sourceFrameIndex": 0,
+          "temporalAvailable": true,
+          "rgbSize": [
+            640,
+            480
+          ],
+          "scene": "assets/cases/track-source/frame-0-view-1.png",
+          "semantic": "assets/cases/track-source/frame-0-view-1-semantic.png",
+          "latentSemantic": "assets/cases/track-source/frame-0-view-1-latent-semantic.png",
+          "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+          "box": [
+            0.115625,
+            0.12083333333333333,
+            0.3421875,
+            0.9083333333333333
+          ],
+          "latentBox": [
+            0.109375,
+            0.11458333333333333,
+            0.35,
+            0.9166666666666666
+          ],
+          "boxEmbedded": false,
+          "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+          "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+          "egoMotionAvailable": false,
+          "targetMotionAvailable": false,
+          "depthAvailable": false,
+          "occupancyAvailable": false
+        },
+        {
+          "frameIndex": 1,
+          "videoTime": 1,
+          "views": [
+            {
+              "key": "view-1",
+              "label": "View 1",
+              "url": "assets/cases/track-source/frame-1-view-1.png",
+              "sourceCrop": [
+                0,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 1,
+              "sourceFrameIndex": 1,
+              "sourcePixelSha256": "bb81d75dc97d86eebc80a75fdc2ce5872d121b1aaaa542daa86c533e00d5a716",
+              "semantic": "assets/cases/track-source/frame-1-view-1-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-1-view-1-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": [
+                0.125,
+                0.17916666666666667,
+                0.3359375,
+                0.7875
+              ],
+              "latentBox": [
+                0.1171875,
+                0.17083333333333334,
+                0.3453125,
+                0.7979166666666667
+              ],
+              "boxSourcePixels": [
+                80,
+                86,
+                215,
+                378
+              ],
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "full",
+              "targetTruncated": false
+            },
+            {
+              "key": "view-2",
+              "label": "View 2",
+              "url": "assets/cases/track-source/frame-1-view-2.png",
+              "sourceCrop": [
+                640,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 1,
+              "sourceFrameIndex": 1,
+              "sourcePixelSha256": "0afba3bec5fd6ea51449739d5551b2ce5926b4ada5e767b2dfca76969f8e3d42",
+              "semantic": "assets/cases/track-source/frame-1-view-2-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-1-view-2-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": null,
+              "latentBox": null,
+              "boxSourcePixels": null,
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "absent",
+              "targetTruncated": false
+            },
+            {
+              "key": "view-3",
+              "label": "View 3",
+              "url": "assets/cases/track-source/frame-1-view-3.png",
+              "sourceCrop": [
+                1280,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 1,
+              "sourceFrameIndex": 1,
+              "sourcePixelSha256": "863d3fb582f0f7cb5124ce32dce6b85a92bb79830c8a159e61d13f6605825dc3",
+              "semantic": "assets/cases/track-source/frame-1-view-3-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-1-view-3-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": null,
+              "latentBox": null,
+              "boxSourcePixels": null,
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "absent",
+              "targetTruncated": false
+            },
+            {
+              "key": "view-4",
+              "label": "View 4",
+              "url": "assets/cases/track-source/frame-1-view-4.png",
+              "sourceCrop": [
+                1920,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 1,
+              "sourceFrameIndex": 1,
+              "sourcePixelSha256": "4e2dbe19590178d396649fd751ed83542e13fd690c20d993128166c614d8ccad",
+              "semantic": "assets/cases/track-source/frame-1-view-4-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-1-view-4-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": [
+                0.9265625,
+                0.22083333333333333,
+                1.0,
+                0.8333333333333334
+              ],
+              "latentBox": [
+                0.91875,
+                0.2125,
+                1.0,
+                0.84375
+              ],
+              "boxSourcePixels": [
+                593,
+                106,
+                640,
+                400
+              ],
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "partial",
+              "targetTruncated": true
+            }
+          ],
+          "time": 1,
+          "referenceTime": 1,
+          "timeBasis": "video-frame",
+          "sourceFrameIndex": 1,
+          "temporalAvailable": true,
+          "rgbSize": [
+            640,
+            480
+          ],
+          "scene": "assets/cases/track-source/frame-1-view-1.png",
+          "semantic": "assets/cases/track-source/frame-1-view-1-semantic.png",
+          "latentSemantic": "assets/cases/track-source/frame-1-view-1-latent-semantic.png",
+          "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+          "box": [
+            0.125,
+            0.17916666666666667,
+            0.3359375,
+            0.7875
+          ],
+          "latentBox": [
+            0.1171875,
+            0.17083333333333334,
+            0.3453125,
+            0.7979166666666667
+          ],
+          "boxEmbedded": false,
+          "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+          "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+          "egoMotionAvailable": false,
+          "targetMotionAvailable": false,
+          "depthAvailable": false,
+          "occupancyAvailable": false
+        },
+        {
+          "frameIndex": 2,
+          "videoTime": 2,
+          "views": [
+            {
+              "key": "view-1",
+              "label": "View 1",
+              "url": "assets/cases/track-source/frame-2-view-1.png",
+              "sourceCrop": [
+                0,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 2,
+              "sourceFrameIndex": 2,
+              "sourcePixelSha256": "7fa8f062fd6b33cc8f4725c2e1579273507a37d3e69b9ba7f1641dc9f1b1c9c0",
+              "semantic": "assets/cases/track-source/frame-2-view-1-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-2-view-1-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": [
+                0.23125,
+                0.21875,
+                0.3890625,
+                0.75625
+              ],
+              "latentBox": [
+                0.225,
+                0.20833333333333334,
+                0.396875,
+                0.76875
+              ],
+              "boxSourcePixels": [
+                148,
+                105,
+                249,
+                363
+              ],
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "full",
+              "targetTruncated": false
+            },
+            {
+              "key": "view-2",
+              "label": "View 2",
+              "url": "assets/cases/track-source/frame-2-view-2.png",
+              "sourceCrop": [
+                640,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 2,
+              "sourceFrameIndex": 2,
+              "sourcePixelSha256": "f2e584dac757fe901d3846cb5f93756a7d2820b88006023ad8b5e492ef4cf94e",
+              "semantic": "assets/cases/track-source/frame-2-view-2-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-2-view-2-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": null,
+              "latentBox": null,
+              "boxSourcePixels": null,
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "absent",
+              "targetTruncated": false
+            },
+            {
+              "key": "view-3",
+              "label": "View 3",
+              "url": "assets/cases/track-source/frame-2-view-3.png",
+              "sourceCrop": [
+                1280,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 2,
+              "sourceFrameIndex": 2,
+              "sourcePixelSha256": "a517b7e51f90887489ad5e3e72cbd54d4584cf3b1a372e2c28c4c49413eaf53f",
+              "semantic": "assets/cases/track-source/frame-2-view-3-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-2-view-3-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": null,
+              "latentBox": null,
+              "boxSourcePixels": null,
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "absent",
+              "targetTruncated": false
+            },
+            {
+              "key": "view-4",
+              "label": "View 4",
+              "url": "assets/cases/track-source/frame-2-view-4.png",
+              "sourceCrop": [
+                1920,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 2,
+              "sourceFrameIndex": 2,
+              "sourcePixelSha256": "2e4b0f1c6884dc7168c0abdef19a7fd9aa3eee32e82f974266516a55e74dfa26",
+              "semantic": "assets/cases/track-source/frame-2-view-4-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-2-view-4-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": null,
+              "latentBox": null,
+              "boxSourcePixels": null,
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "absent",
+              "targetTruncated": false
+            }
+          ],
+          "time": 2,
+          "referenceTime": 2,
+          "timeBasis": "video-frame",
+          "sourceFrameIndex": 2,
+          "temporalAvailable": true,
+          "rgbSize": [
+            640,
+            480
+          ],
+          "scene": "assets/cases/track-source/frame-2-view-1.png",
+          "semantic": "assets/cases/track-source/frame-2-view-1-semantic.png",
+          "latentSemantic": "assets/cases/track-source/frame-2-view-1-latent-semantic.png",
+          "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+          "box": [
+            0.23125,
+            0.21875,
+            0.3890625,
+            0.75625
+          ],
+          "latentBox": [
+            0.225,
+            0.20833333333333334,
+            0.396875,
+            0.76875
+          ],
+          "boxEmbedded": false,
+          "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+          "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+          "egoMotionAvailable": false,
+          "targetMotionAvailable": false,
+          "depthAvailable": false,
+          "occupancyAvailable": false
+        },
+        {
+          "frameIndex": 3,
+          "videoTime": 3,
+          "views": [
+            {
+              "key": "view-1",
+              "label": "View 1",
+              "url": "assets/cases/track-source/frame-3-view-1.png",
+              "sourceCrop": [
+                0,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 3,
+              "sourceFrameIndex": 3,
+              "sourcePixelSha256": "b959839e34fdbd4ae3313f2c1db789ce48b9994a9a756cb39fc4162de658a5c8",
+              "semantic": "assets/cases/track-source/frame-3-view-1-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-3-view-1-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": [
+                0.31875,
+                0.23541666666666666,
+                0.45625,
+                0.7395833333333334
+              ],
+              "latentBox": [
+                0.3109375,
+                0.22916666666666666,
+                0.465625,
+                0.7479166666666667
+              ],
+              "boxSourcePixels": [
+                204,
+                113,
+                292,
+                355
+              ],
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "full",
+              "targetTruncated": false
+            },
+            {
+              "key": "view-2",
+              "label": "View 2",
+              "url": "assets/cases/track-source/frame-3-view-2.png",
+              "sourceCrop": [
+                640,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 3,
+              "sourceFrameIndex": 3,
+              "sourcePixelSha256": "5fe0c6e51bc45639c47b1d52d175dd637e10dcb17e7b4fcf02cd768e85834911",
+              "semantic": "assets/cases/track-source/frame-3-view-2-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-3-view-2-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": null,
+              "latentBox": null,
+              "boxSourcePixels": null,
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "absent",
+              "targetTruncated": false
+            },
+            {
+              "key": "view-3",
+              "label": "View 3",
+              "url": "assets/cases/track-source/frame-3-view-3.png",
+              "sourceCrop": [
+                1280,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 3,
+              "sourceFrameIndex": 3,
+              "sourcePixelSha256": "993996aaf9a29e56303b48d9c01731d4aa95a52650697482bc64a6900091fd2a",
+              "semantic": "assets/cases/track-source/frame-3-view-3-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-3-view-3-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": null,
+              "latentBox": null,
+              "boxSourcePixels": null,
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "absent",
+              "targetTruncated": false
+            },
+            {
+              "key": "view-4",
+              "label": "View 4",
+              "url": "assets/cases/track-source/frame-3-view-4.png",
+              "sourceCrop": [
+                1920,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 3,
+              "sourceFrameIndex": 3,
+              "sourcePixelSha256": "7e8fc147672631e7a094250b06ce91d68bed123a8b2ac5b39feaea15ede88b2e",
+              "semantic": "assets/cases/track-source/frame-3-view-4-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-3-view-4-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": null,
+              "latentBox": null,
+              "boxSourcePixels": null,
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "absent",
+              "targetTruncated": false
+            }
+          ],
+          "time": 3,
+          "referenceTime": 3,
+          "timeBasis": "video-frame",
+          "sourceFrameIndex": 3,
+          "temporalAvailable": true,
+          "rgbSize": [
+            640,
+            480
+          ],
+          "scene": "assets/cases/track-source/frame-3-view-1.png",
+          "semantic": "assets/cases/track-source/frame-3-view-1-semantic.png",
+          "latentSemantic": "assets/cases/track-source/frame-3-view-1-latent-semantic.png",
+          "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+          "box": [
+            0.31875,
+            0.23541666666666666,
+            0.45625,
+            0.7395833333333334
+          ],
+          "latentBox": [
+            0.3109375,
+            0.22916666666666666,
+            0.465625,
+            0.7479166666666667
+          ],
+          "boxEmbedded": false,
+          "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+          "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+          "egoMotionAvailable": false,
+          "targetMotionAvailable": false,
+          "depthAvailable": false,
+          "occupancyAvailable": false
+        },
+        {
+          "frameIndex": 4,
+          "videoTime": 4,
+          "views": [
+            {
+              "key": "view-1",
+              "label": "View 1",
+              "url": "assets/cases/track-source/frame-4-view-1.png",
+              "sourceCrop": [
+                0,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 4,
+              "sourceFrameIndex": 4,
+              "sourcePixelSha256": "d6818749699387a52b55184b4009b1015208961693c56eec9cd1ea117c0b5ae5",
+              "semantic": "assets/cases/track-source/frame-4-view-1-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-4-view-1-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": [
+                0.39375,
+                0.24375,
+                0.521875,
+                0.7354166666666667
+              ],
+              "latentBox": [
+                0.3875,
+                0.23541666666666666,
+                0.5296875,
+                0.7458333333333333
+              ],
+              "boxSourcePixels": [
+                252,
+                117,
+                334,
+                353
+              ],
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "full",
+              "targetTruncated": false
+            },
+            {
+              "key": "view-2",
+              "label": "View 2",
+              "url": "assets/cases/track-source/frame-4-view-2.png",
+              "sourceCrop": [
+                640,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 4,
+              "sourceFrameIndex": 4,
+              "sourcePixelSha256": "d68f9f11fd24204227e4a8b32ee9601678f716c26abd6c30a257d7811f9ab68a",
+              "semantic": "assets/cases/track-source/frame-4-view-2-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-4-view-2-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": null,
+              "latentBox": null,
+              "boxSourcePixels": null,
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "absent",
+              "targetTruncated": false
+            },
+            {
+              "key": "view-3",
+              "label": "View 3",
+              "url": "assets/cases/track-source/frame-4-view-3.png",
+              "sourceCrop": [
+                1280,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 4,
+              "sourceFrameIndex": 4,
+              "sourcePixelSha256": "f098551b119368b24b885d7ceb29bc1397bd5d58cc57473a4fd52de5558681ba",
+              "semantic": "assets/cases/track-source/frame-4-view-3-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-4-view-3-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": null,
+              "latentBox": null,
+              "boxSourcePixels": null,
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "absent",
+              "targetTruncated": false
+            },
+            {
+              "key": "view-4",
+              "label": "View 4",
+              "url": "assets/cases/track-source/frame-4-view-4.png",
+              "sourceCrop": [
+                1920,
+                0,
+                640,
+                480
+              ],
+              "rgbSize": [
+                640,
+                480
+              ],
+              "referenceTime": 4,
+              "sourceFrameIndex": 4,
+              "sourcePixelSha256": "f49514861437679e576391006e09f2f72789e6d58e24ec57ece3129da39d8b52",
+              "semantic": "assets/cases/track-source/frame-4-view-4-semantic.png",
+              "latentSemantic": "assets/cases/track-source/frame-4-view-4-latent-semantic.png",
+              "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+              "box": null,
+              "latentBox": null,
+              "boxSourcePixels": null,
+              "boxEmbedded": false,
+              "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+              "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+              "targetVisibility": "absent",
+              "targetTruncated": false
+            }
+          ],
+          "time": 4,
+          "referenceTime": 4,
+          "timeBasis": "video-frame",
+          "sourceFrameIndex": 4,
+          "temporalAvailable": true,
+          "rgbSize": [
+            640,
+            480
+          ],
+          "scene": "assets/cases/track-source/frame-4-view-1.png",
+          "semantic": "assets/cases/track-source/frame-4-view-1-semantic.png",
+          "latentSemantic": "assets/cases/track-source/frame-4-view-1-latent-semantic.png",
+          "semanticKind": "RGB-conditioned generated illustration; not source labels or model output",
+          "box": [
+            0.39375,
+            0.24375,
+            0.521875,
+            0.7354166666666667
+          ],
+          "latentBox": [
+            0.3875,
+            0.23541666666666666,
+            0.5296875,
+            0.7458333333333333
+          ],
+          "boxEmbedded": false,
+          "boxProvenance": "Manually reviewed visible person bounds on the unannotated RGB; display overlay only",
+          "latentBoxProvenance": "Slightly expanded illustrative estimate of the same visible target",
+          "egoMotionAvailable": false,
+          "targetMotionAvailable": false,
+          "depthAvailable": false,
+          "occupancyAvailable": false
+        }
+      ],
+      "pendingReadoutAssets": []
+    }
+  ],
+  "palette": [
+    {
+      "name": "Unknown",
+      "color": "#edf0f2"
+    },
+    {
+      "name": "Floor",
+      "color": "#ddb879"
+    },
+    {
+      "name": "Wall",
+      "color": "#778a99"
+    },
+    {
+      "name": "Table",
+      "color": "#bc7c58"
+    },
+    {
+      "name": "Chair",
+      "color": "#e15b68"
+    },
+    {
+      "name": "Cabinet",
+      "color": "#a57647"
+    },
+    {
+      "name": "Plant",
+      "color": "#689055"
+    },
+    {
+      "name": "Person",
+      "color": "#e15b68"
+    },
+    {
+      "name": "Door",
+      "color": "#bc7c58"
+    },
+    {
+      "name": "Sofa",
+      "color": "#a262b6"
+    },
+    {
+      "name": "Ceiling",
+      "color": "#79bee6"
+    },
+    {
+      "name": "Window",
+      "color": "#52afb3"
+    },
+    {
+      "name": "Bed",
+      "color": "#689055"
+    },
+    {
+      "name": "Decoration",
+      "color": "#e583ab"
+    },
+    {
+      "name": "Object",
+      "color": "#bc7c58"
+    }
+  ],
+  "defaultCase": "vln"
+}

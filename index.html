@@ -23,14 +23,14 @@
                 Yinxi Wang &nbsp;|&nbsp; 王印熹
               </p>
               <p>
-                Hi there! I'm a first-year undergraduate student at
+                Hi there! I'm a second-year undergraduate student at
                 <a href="https://english.pku.edu.cn/">Peking University</a>,
                 majoring in Artificial Intelligence. Currently, I am a research intern at the
                 <a href="https://pku-hmi-lab.github.io/HMI-Web/index.html#">HMI Lab</a>
                 at Peking University, advised by Prof.
                 <a href="https://cs.pku.edu.cn/info/1236/2067.htm">Shanghang Zhang</a>.
-                My research interests lie in Embodied AI, especially in World Models and
-                Vision-Language-Action models, as well as Deep Reinforcement Learning.
+                My research focuses on humanoid loco-manipulation and dexterous manipulation
+                toward generalizable physical intelligence.
               </p>
               <p style="text-align:center">
                 <a href="mailto:wangyinxi0807@gmail.com">Email</a> &nbsp;/&nbsp;
@@ -54,8 +54,10 @@
             <td style="padding:16px;width:100%;vertical-align:middle">
               <h2>News</h2>
               <ul style="line-height:1.5;">
-                <li><strong>[2026.06]</strong> New preprint <a href="https://arxiv.org/abs/2606.23685">LaST-HD</a> is released on arXiv.</li>
-                <li><strong>[2026.04]</strong> New preprint <a href="https://arxiv.org/abs/2604.28192">LaST-R1</a> is released on arXiv.</li>
+                <li><strong>[2026.10]</strong> Introducing <a href="representnav/">RepresentNav</a>: see what I need, dream what I want.</li>
+                <li><strong>[2026.10]</strong> New preprint <a href="https://nvidia-isaac.github.io/video_to_data/physicalword/">Physical Words</a> is released on arXiv.</li>
+                <li><strong>[2026.06]</strong> New preprint <a href="https://siriyep.github.io/last-hd-project-page/">LaST-HD</a> is released on arXiv.</li>
+                <li><strong>[2026.04]</strong> New preprint <a href="https://siriyep.github.io/last-r1/">LaST-R1</a> is released on arXiv.</li>
                 <li><strong>[2026.01]</strong> Joined the HMI Lab as a research intern.</li>
               </ul>
             </td>
@@ -70,9 +72,9 @@
             <td style="padding:16px;width:100%;vertical-align:middle">
               <h2>Selected Publications</h2>
               <p>
-                My research focuses on Embodied AI &mdash; world models, vision-language-action
-                models, and deep reinforcement learning for robot manipulation.
-                (<sup>*</sup> denotes equal contribution.)
+                I study how robots can coordinate whole-body movement and skillful object
+                interaction, with a focus on humanoid loco-manipulation and dexterous manipulation.
+                (<sup>*</sup> denotes equal contribution; <sup>†</sup> denotes project lead.)
               </p>
             </td>
           </tr>
@@ -80,14 +82,53 @@
 
         <table style="width:100%;border:0;border-spacing:0 10px;border-collapse:separate;margin:0 auto;"><tbody>
 
-          <!-- Publication 1: LaST-HD (newest) -->
+          <!-- RepresentNav -->
+          <tr bgcolor="#ffffd0">
+            <td style="padding:16px;width:25%;vertical-align:middle">
+              <a href="representnav/"><img src="images/representnav.jpg" width="100%" alt="RepresentNav: navigation, decoded scene representations, and benchmark results" loading="lazy"></a>
+            </td>
+            <td style="padding:16px;width:75%;vertical-align:middle">
+              <a href="representnav/"><span class="papertitle">See What I Need, Dream What I Want: A Navigation Foundation Model on a Self-Constructed Representation Space</span></a>
+              <br>
+              <a href="https://pku-cs-cjw.top/">Jiawei Chen<sup>*</sup></a>, <strong>Yinxi Wang<sup>*†</sup></strong>, Zihan Yang<sup>*</sup>, Meijun Gao<sup>*</sup>, Yaowei Liu<sup>*</sup>, Shuming Zhang<sup>*</sup>, Zecheng Li, Xiangju Mi, Yuxuan Liu, Runzhong Huang, Tianlin Li, Xun Zhang, Zhengyang Wang, Xu Miao, Tong Yang
+              <br>
+              <em>Research manuscript</em>, 2026
+              <br>
+              <a href="representnav/">Project</a> / <span>Paper: Coming soon</span> / <span>Code: Coming soon</span>
+              <p style="margin:6px 0 0;">
+                RepresentNav learns what to see and predicts the world ahead, enabling goal-directed navigation, instruction following, and visual tracking in cluttered, dynamic environments.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Physical Words -->
+          <tr>
+            <td style="padding:16px;width:25%;vertical-align:middle">
+              <a href="https://nvidia-isaac.github.io/video_to_data/physicalword/"><img src="images/physical-words.jpg" width="100%" alt="Physical Words: visual and tactile reasoning for robot manipulation" loading="lazy"></a>
+            </td>
+            <td style="padding:16px;width:75%;vertical-align:middle">
+              <a href="https://nvidia-isaac.github.io/video_to_data/physicalword/"><span class="papertitle">Physical Words: A Vocabulary for Structuring Latent Reasoning in Robot Manipulation</span></a>
+              <br>
+              <a href="https://liujiaming1996.github.io/">Jiaming Liu<sup>*</sup></a>, Xinghao Zhu<sup>*</sup>, Yiming Zhang<sup>*</sup>, <a href="https://www.shanghangzhang.com/">Shanghang Zhang<sup>*</sup></a>, <strong>Yinxi Wang</strong>, Yichu Yang, Zhuoyang Liu, Dantong Niu, Soha Pouya, Juekun Li, Yan Chang
+              <br>
+              <em>arXiv preprint</em>, 2026
+              <br>
+              <a href="https://arxiv.org/abs/2610.26854">arXiv</a> /
+              <a href="https://nvidia-isaac.github.io/video_to_data/physicalword/">Project</a>
+              <p style="margin:6px 0 0;">
+                Connects atomic action words with visual and tactile dynamics to support precise, contact-rich robot manipulation across bimanual and dexterous-hand systems.
+              </p>
+            </td>
+          </tr>
+
+          <!-- LaST-HD -->
           <tr bgcolor="#ffffd0">
             <td style="padding:16px;width:25%;vertical-align:middle">
               <img src="images/last-hd.png" width="100%" alt="LaST-HD method figure"
                    onerror="this.style.display='none'">
             </td>
             <td style="padding:16px;width:75%;vertical-align:middle">
-              <a href="https://arxiv.org/abs/2606.23685"><span class="papertitle">LaST-HD: Learning Latent Physical Reasoning from Scalable Human Data for Robot Manipulation</span></a>
+              <a href="https://siriyep.github.io/last-hd-project-page/"><span class="papertitle">LaST-HD: Learning Latent Physical Reasoning from Scalable Human Data for Robot Manipulation</span></a>
               <br>
               <a href="https://liujiaming1996.github.io/">Jiaming Liu<sup>*</sup></a>, <strong>Yinxi Wang<sup>*</sup></strong>, <a href="http://guchenyang.site/">Chenyang Gu<sup>*</sup></a>, <a href="https://siriyep.github.io/">Siyuan Qian<sup>*</sup></a>, <a href="https://scholar.google.com/citations?user=ICCEv6YAAAAJ&hl=zh-CN&oi=ao">Xiangju Mi<sup>*</sup></a>, <a href="https://chen-h01.github.io/">Hao Chen</a>, <a href="#">Jiawei Chen</a>, <a href="https://github.com/qingpowuwu">Qingpo Wuwu</a>, <a href="https://clorislili.github.io/clorisLi/">Xiaoqi Li</a>, <a href="#">Nuowei Han</a>, <a href="#">Yiming Zhang</a>, <a href="#">Xuheng Zhang</a>, <a href="#">Yang Yue</a>, <a href="#">Yeqing Yang</a>, <a href="#">Lei Wang</a>, <a href="#">Peng Jia</a>, <a href="#">Hao Tang</a>, <a href="https://www.shanghangzhang.com/">Shanghang Zhang</a>
               <br>
@@ -102,14 +143,14 @@
             </td>
           </tr>
 
-          <!-- Publication 2: LaST-R1 (earlier) -->
+          <!-- LaST-R1 -->
           <tr>
             <td style="padding:16px;width:25%;vertical-align:middle">
               <img src="images/last-r1.png" width="100%" alt="LaST-R1 method figure"
                    onerror="this.style.display='none'">
             </td>
             <td style="padding:16px;width:75%;vertical-align:middle">
-              <a href="https://arxiv.org/abs/2604.28192"><span class="papertitle">LaST-R1: Reinforcing Robotic Manipulation via Adaptive Physical Latent Reasoning</span></a>
+              <a href="https://siriyep.github.io/last-r1/"><span class="papertitle">LaST-R1: Reinforcing Robotic Manipulation via Adaptive Physical Latent Reasoning</span></a>
               <br>
               <a href="https://chen-h01.github.io/">Hao Chen<sup>*</sup></a>, <a href="https://liujiaming1996.github.io/">Jiaming Liu<sup>*</sup></a>, <a href="#">Zhonghao Yan<sup>*</sup></a>, <a href="#">Nuowei Han<sup>*</sup></a>, <a href="https://zrrskywalker.github.io/">Renrui Zhang</a>, <a href="http://guchenyang.site/">Chenyang Gu</a>, <a href="#">Jialin Gao</a>, <a href="https://ziyuguo99.github.io/">Ziyu Guo</a>, <a href="https://siriyep.github.io/">Siyuan Qian</a>, <strong>Yinxi Wang</strong>, <a href="#">Peng Jia</a>, <a href="https://www.shanghangzhang.com/">Shanghang Zhang</a>, <a href="https://scholar.google.com/citations?user=OFdytjoAAAAJ&hl=en">Pheng-Ann Heng</a>
               <br>
