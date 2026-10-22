@@ -53,6 +53,16 @@ span.highlight {
   background-color: #ffffd0;
 }
 
+/* The portrait is cropped in the image file, so every viewport shows the same frame. */
+.profile-photo {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
 /* Match the Times author symbols used on the RepresentNav project page. */
 .author-mark {
   font-family: "Times New Roman", Times, serif;
